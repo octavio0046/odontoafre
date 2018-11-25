@@ -21,7 +21,7 @@
      <center>   
     <h2 >SISTEMA CLINICA DENTAL</h2>
 
-       <h2 >INFORMACION DE LA CLINICA</h2>
+       <h1>BIENVENIDOS</h1>
     </center>
         
          

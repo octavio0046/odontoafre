@@ -53,6 +53,7 @@
 
                    <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
                 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+                    <th><a href="formRegistrarPaciente.jsp"> Regisrar Paciente</a> </th>
                  
 
                 <%                    }
@@ -63,6 +64,7 @@
 
                 %>
 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+    <th><a href="formRegistrarPaciente.jsp"> Regisrar Paciente</a> </th>
                 
                  <%                    }
 
