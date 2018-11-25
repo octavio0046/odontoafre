@@ -10,19 +10,12 @@
 <%@page session="true"%>
 <!DOCTYPE html>
 <%
-    
-    
-    
-    
      HttpSession objsesion = request.getSession(false);
     String usuario = (String) objsesion.getAttribute("perfil");
     if (usuario.equals("")) {
 
         response.sendRedirect("index.jsp");
-
     }
-    
-   
     String usu = "";
     String nom = "";
     HttpSession sesionOK = request.getSession();

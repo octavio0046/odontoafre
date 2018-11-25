@@ -53,6 +53,7 @@
 
                    <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
                 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+                 
 
                 <%                    }
 

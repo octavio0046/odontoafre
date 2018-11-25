@@ -31,7 +31,7 @@
            %>  
         
            <form action="ServletControlador" method="get">
-               <label>Segudo que desea eliminar al cliente con el codigo </label>
+               <label>Seguro que desea eliminar al cliente con el codigo </label>
               
 
                <input type="text"  name="txtCodigoPaciente" style="width:80px;height:15px" value="<%= d.getCodigo()%>" readonly="">

@@ -64,6 +64,8 @@
 
                    <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
                 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+                 <th><a href="Pacientes/formRegistrarPaciente.jsp"> Regisrar Paciente</a> </th>
+               
 
                 <%                    }
 
@@ -73,6 +75,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
                 %>
 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+
                 
                  <%                    }
 
