@@ -46,8 +46,8 @@
 
                     %>
 
-                  <th><a href="../obtenerPagosInter.jsp"> Buscar Pagos En Intervalo</a> </th>
-                <th><a href="../registrarUsuario.jsp"> Regisrar Usuario</a> </th>
+                  <th><a href="obtenerPagosInter.jsp"> Buscar Pagos En Intervalo</a> </th>
+                <th><a href="registrarUsuario.jsp"> Regisrar Usuario</a> </th>
                 
                     <%                }
 
@@ -62,9 +62,9 @@
 
                 %>
 
-                   <th><a href="../ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
-                <th><a href="../ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
-                 <th><a href="../Pacientes/formRegistrarPaciente.jsp"> Regisrar Paciente</a> </th>
+                   <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
+                <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+                     <th><a href="Pacientes/formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
                
 
                 <%                    }
@@ -74,8 +74,8 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
 
                 %>
-<th><a href="../ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
-    <th><a href="../Pacientes/formRegistrarPaciente.jsp"> Regisrar Paciente</a> </th>
+   <th><a href="../ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+      <th><a href="Pacientes/formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
 
                 
                  <%                    }
@@ -89,7 +89,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
                         //si alguien ya inicio sesion entonces mostrar su nombre 
                 %>
-                <th><a href="../ServletLogueo?accion=cerrar"> Cerrar Sesion</a> </th>
+                <th><a href="ServletLogueo?accion=cerrar"> Cerrar Sesion</a> </th>
                 <th width="200"><%out.println("Bienvenido:  " + nom);%>
 
                 </th> 
@@ -118,7 +118,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
            <center>                 
         <h2 align="center">BUSCAR PACIENTE</h2>
            
-            <form action="../ServletControlador" method="get">
+            <form action="ServletControlador" method="get">
                 <input type="hidden" name="accion" value="BuscarUNPaciente" />
                
                

@@ -39,12 +39,12 @@ public class ServletLogueo
           sesionOK.setAttribute("perfil", rs.getString(5));
           sesionOK.setAttribute("nom", rs.getString(3));
           sesionOK.setAttribute("ape", rs.getString(2));
-          request.getRequestDispatcher("../index.jsp").forward(request, response);
+          request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         else
         {
           request.setAttribute("msg", "Error de Usu o pas");
-          request.getRequestDispatcher("../login.jsp").forward(request, response);
+          request.getRequestDispatcher("login.jsp").forward(request, response);
         }
       }
       catch (Exception e)

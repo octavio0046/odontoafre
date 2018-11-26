@@ -37,7 +37,7 @@
     
           
     <center>
-  <a href="buscarPaciente.jsp">
+       <a href="BuscarPaciente.jsp">
           <img src="http://www.tiempodenegocioshoy.com/wp-content/uploads/2013/02/NEGOCIO-2.jpg" width="400" height="400"/>
   </a>
     </center>
