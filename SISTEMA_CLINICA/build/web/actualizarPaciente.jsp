@@ -38,7 +38,7 @@
         
          <h2 align="center">Actualizar HISTORIAL</h2>
         
-        <form action="ServletControlador" method="post">
+        <form action="ServletPacientes" method="post">
             <table border="0" width="400" align="center">
                 <tr>
                     <td>CodigoPaciente</td>

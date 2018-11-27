@@ -15,7 +15,7 @@ public class PacienteBD
     try
     {
       Connection cn = Conexion.getConexion();
-      CallableStatement cl = cn.prepareCall("{call REGISTRAR_IMAGEN (?,?,?,?)}");
+      CallableStatement cl = cn.prepareCall("{call REGISTRAR_IMAGEN(?,?,?,?)}");
       cl.setInt(1, p.getCodigoPaciente());
       cl.setString(2, p.getNombre());
       cl.setString(3, p.getObservaciones());

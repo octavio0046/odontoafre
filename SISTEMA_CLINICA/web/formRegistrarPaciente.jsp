@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <%@include file="/template1.jsp" %>
+        <%@include file="template1.jsp" %>
    
     </head>
     <body>
@@ -21,7 +21,7 @@
         
         <div style="border: 2px;">
             
-      <form  action="../ServletControlador" method="get">
+      <form  action="ServletPacientes" method="get">
         
           <div class="form-group">
               

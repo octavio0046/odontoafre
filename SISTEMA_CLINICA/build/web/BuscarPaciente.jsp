@@ -64,7 +64,7 @@
 
                    <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
                 <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
-                     <th><a href="Pacientes/formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
+                     <th><a href="formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
                
 
                 <%                    }
@@ -74,8 +74,8 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
 
                 %>
-   <th><a href="../ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
-      <th><a href="Pacientes/formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
+   <th><a href="ServletControlador?accion=BuscarPaciente"> Buscar Paciente</a> </th>
+      <th><a href="formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
 
                 
                  <%                    }
@@ -118,13 +118,13 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
            <center>                 
         <h2 align="center">BUSCAR PACIENTE</h2>
            
-            <form action="ServletControlador" method="get">
+            <form action="ServletPacientes" method="get">
                 <input type="hidden" name="accion" value="BuscarUNPaciente" />
                
                
                     
                     <label>Busque por Nombre</label>
-                    <input type="text" placeholder="Nombre Paciente" name="txtNombre"  pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
+                    <input type="text" placeholder="Nombre Paciente" name="txtNombre"  pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
                                    
                     <input type="submit"  name="btn" value="Buscar" >    
                     <h6>1. Busque por medio del primer nombre del paciente </h6>
@@ -148,10 +148,10 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 <th>Referido</th><th>Ocupacion</th>
                 <th>DPI</th>
                 <th></th>
-                <th>VER FICHA</th>
-              
-                
-                
+                <th>ACCIONES</th>
+                   <th></th>
+                       <th></th>
+  
             </tr>
             
             <%
@@ -173,11 +173,11 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 <td><%=v.getReferido()%></td>
                 <td><%=v.getOcupacion()%></td>
                 <td><%=v.getDpi()%></td>
-                <th><a href="../obtenerDetallePaciente.jsp?cod=<%=v.getCodigo_paciente()%>"
+                <th><a href="obtenerDetallePaciente.jsp?cod=<%=v.getCodigo_paciente()%>"
                        target="detalle">Ver Detalle</a></th>
                        
                        
-                 <th><a href="../fichaPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
+                 <th><a href="fichaPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
                 <img src="ficha.png" whit="30" height="30">
                </a></th>
                        
@@ -187,12 +187,12 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
                 %>
                        
-                   <th><a href="../eliminarPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
+                   <th><a href="eliminarPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
                 <img src="eliminar.jpg" whit="30" height="30">
                </a></th>
                        
                
-                 <th><a href="../actualizarPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
+                 <th><a href="actualizarPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
                 <img src="actualizar.png" whit="30" height="30">
                </a></th>
                        

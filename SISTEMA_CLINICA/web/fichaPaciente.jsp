@@ -18,7 +18,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-     <%@include file="/template1.jsp" %>
+     <%@include file="template1.jsp" %>
     </head>
     <body>
  
@@ -39,7 +39,7 @@
     <center>   
                 <h2 align="center">PRESUPUESTO PACIENTE</h2>
            
-                       <form action="../ServletControlador" method="get" align="left">
+                       <form action="ServletControlador" method="get" align="left">
                 <input type="hidden" name="accion" value="RegistrarPresupuesto" />
                 
                       <%if (sesionOK.getAttribute("perfil") != null) {
@@ -131,7 +131,7 @@
                     
                          <td>
 
-                        <textarea type="text"   name="txtOtb" style="width:150px;height:75px"  required=""  title="SOLO MAYUSCULAS"></textarea>
+                        <textarea type="text"   name="txtOtb" style="width:150px;height:75px"  required=""  ></textarea>
 
                     </td> 
                     
@@ -167,8 +167,7 @@
                 
                  <br>     
             
-                     <th><a href="obtenerHistorial.jsp?cod=<%=d.getCodigo()%>"
-                       target="detalle2">Ver Historial</a></th>
+                     <th><a href="obtenerHistorial.jsp?cod=<%=d.getCodigo()%>">Ver Historial</a></th>
             </form>  
 
     

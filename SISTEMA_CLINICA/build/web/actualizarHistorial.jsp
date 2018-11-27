@@ -82,7 +82,7 @@
                 
                 <tr>
                     <td>ESTADO</td>
-                    <td><input type="text" name="txtEstado" value="<%=d.getEstado()%>" ></td>
+                    <td><input type="text" name="txtEstado" value="<%=d.getEstado()%>" readonly="" ></td>
                     
                 </tr>
                  

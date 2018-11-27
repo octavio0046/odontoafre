@@ -30,7 +30,7 @@
                                 FormularioPaciente d = lista.get(i);
            %>  
         
-           <form action="ServletControlador" method="get">
+           <form action="ServletPacientes" method="get">
                <label>Seguro que desea eliminar al cliente con el codigo </label>
               
 

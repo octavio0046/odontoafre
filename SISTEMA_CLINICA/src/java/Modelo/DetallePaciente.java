@@ -346,7 +346,7 @@ public class DetallePaciente
     ArrayList<Paciente> lista = new ArrayList();
     try
     {
-      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT * FROM TB_PACIENTES WHERE NOMBRES=?");
+      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT * FROM TB_PACIENTES WHERE NOMBRES=? AND ESTADO='ACTIVO'");
       cl.setString(1, nom);
       ResultSet rs = cl.executeQuery();
       while (rs.next())
