@@ -26,10 +26,7 @@ public class ServletControlador
     throws ServletException, IOException
   {
     String accion = request.getParameter("accion");
-    if  (accion.equals("RegistrarFormularioPaciente")) {
-      registrarFormulario(request, response);
-     
-    } else if (accion.equals("RegistrarPagoPaciente")) {
+    if  (accion.equals("RegistrarPagoPaciente")) {
       registrarPagoPaciente(request, response);
     } else if (accion.equals("RegistrarPresupuesto")) {
       registrarPresupuesto(request, response);
