@@ -27,7 +27,7 @@
     <center>
         
    <h2 align="center">Registrese</h2>
-      <form  class="antecedentes" action="ServletControlador" method="get">
+      <form  class="antecedentes" action="ServletFormularios" method="get">
 
                     <%
             DetallePaciente nuevo = new DetallePaciente();
