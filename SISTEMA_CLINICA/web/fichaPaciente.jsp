@@ -39,7 +39,7 @@
     <center>   
                 <h2 align="center">PRESUPUESTO PACIENTE</h2>
            
-                       <form action="ServletControlador" method="get" align="left">
+                       <form action="ServletTratamientos" method="get" align="left">
                 <input type="hidden" name="accion" value="RegistrarPresupuesto" />
                 
                       <%if (sesionOK.getAttribute("perfil") != null) {
@@ -83,7 +83,7 @@
      <h4 align="center">HISTORIAL DEL PACIENTE</h4>
 
         <table BORDER width="5%" heigth="50%" align="center"  >
-            <form action="ServletControlador" method="get">
+            <form action="ServletHistorial" method="get">
                 <tr bgcolor="#FF5733" width="50%" >
                     
                     <th >PIEZA</th><th >CONDUCTO</th>

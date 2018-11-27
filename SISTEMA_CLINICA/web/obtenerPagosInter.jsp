@@ -159,7 +159,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
    <center>                 
         <h2 align="center">BUSCAR PAGOS INTERVALO DE FECHAS</h2>
            
-            <form action="ServletControlador" method="get">
+            <form action="ServletPagos" method="get">
                 <input type="hidden" name="accion" value="BuscarInterPagos" />
    
                

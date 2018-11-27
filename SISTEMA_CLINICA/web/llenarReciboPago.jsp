@@ -28,7 +28,7 @@
         <center>
             <h2 align="center">Presupuesto del Paciente</h2>
             <table border="1" width="600" align="center">
-                <form action="ServletControlador" method="get">
+                <form action="ServletPagos" method="get">
                     <tr bgcolor="skyblue">
                  
                         

@@ -37,7 +37,7 @@
     <center>
          <h2 align="center">Actualizar Tratamiento </h2>
         
-        <form action="ServletControlador" method="post">
+        <form action="ServletTratamientos" method="post">
             <table border="0" width="400" align="center">
                 <tr>
                     <td>CodigoTratamiento</td>
