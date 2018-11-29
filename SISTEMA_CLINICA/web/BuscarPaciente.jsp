@@ -37,6 +37,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
        <link rel="stylesheet" href="estilos22.css"/>
+       
  
  <table border="0" width="1000" align="center">
             <tr bgcolor="skyblue" style="width: 50px; height: 50px;">
@@ -62,7 +63,7 @@
 
                 %>
 
-                   <th><a href="ServletControlador?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
+                   <th><a href="ServletUsuarios?accion=MostrarUsuarios"> Mostrar Usuarios</a> </th>
                     <th><a href="ServletPacientes?accion=BuscarPaciente"> Buscar Paciente</a> </th>
                      <th><a href="formRegistrarPaciente.jsp"> Regisrar Pacientes</a> </th>
                
@@ -172,7 +173,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 <td><%=v.getTelefono2()%></td>
                 <td><%=v.getReferido()%></td>
                 <td><%=v.getOcupacion()%></td>
-                <td><%=v.getDpi()%></td>
+                <td><%=v.getDpi()%></td>                
                 <th><a href="obtenerDetallePaciente.jsp?cod=<%=v.getCodigo_paciente()%>"
                        target="detalle">Ver Detalle</a></th>
                        
@@ -181,7 +182,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 <img src="ficha.png" whit="30" height="30">
                </a></th>
                        
-                       
+                     
                 <%        if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").equals("ADMIN")) {
 
 
@@ -195,24 +196,13 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                  <th><a href="actualizarPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
                 <img src="actualizar.png" whit="30" height="30">
                </a></th>
-                       
-               
-               
-               
+             
                 <%                    }
 
                 %>
-               
-               
+                       
             </tr>
-      
-             
-            
-   
-            
-            
-            
-            
+  
               <%
             }
             
@@ -232,8 +222,6 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 
             </div>      
                     
-                 
-             
-        
-    </body>
+
+</body>
 </html>

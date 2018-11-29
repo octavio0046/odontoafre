@@ -21,7 +21,7 @@
                     FormularioPaciente d = lista.get(i);
             %> 
             
-
+            
             <tr bgcolor="skyblue"> 
             <tr>  
                 <td>Cod Formulario</td> 

@@ -108,7 +108,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
 
 
 <center>
- <form  action="ServletControlador" method="get">
+ <form  action="ServletUsuarios" method="get">
     
    
      <br>          <h1>REGISTRAR USUARIO</h1>
