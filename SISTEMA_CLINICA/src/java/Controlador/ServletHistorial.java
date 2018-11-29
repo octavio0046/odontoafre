@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.DetallePaciente;
 import Modelo.FormularioPaciente;
+import Modelo.HistorialBD;
 import Modelo.HistorialPaciente;
 import Modelo.Imagenes;
 import Modelo.PacienteBD;
@@ -59,7 +60,7 @@ public class ServletHistorial extends HttpServlet {
   {
     int cod = Integer.parseInt(request.getParameter("txtCodigoHistorial"));
     
-    boolean rpta = PacienteBD.EliminarHistorial(cod);
+    boolean rpta = HistorialBD.EliminarHistorial(cod);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men = Se elimino el Historial correctamente");
     } else {
@@ -82,7 +83,7 @@ public class ServletHistorial extends HttpServlet {
     String estado = request.getParameter("txtEstado");
     
     HistorialPaciente p = new HistorialPaciente(codHisto, pieza, conducto, conductometria, base, otb, obser, usuario, estado);
-    boolean rpta = PacienteBD.actualizarHistorial(p);
+    boolean rpta = HistorialBD.actualizarHistorial(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=Se actualizo de manera correcta");
     } else {
@@ -105,7 +106,7 @@ public class ServletHistorial extends HttpServlet {
     
     HistorialPaciente p = new HistorialPaciente(codpaciente, pieza, conducto, conductometria, base, otb, obser, usuario);
     
-    boolean rpta = PacienteBD.InseretarHistorial(p);
+    boolean rpta = HistorialBD.InseretarHistorial(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=se registro correctamente");
     } else {

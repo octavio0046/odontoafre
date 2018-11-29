@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Imagenes;
 import Modelo.PacienteBD;
 import Modelo.Presupuesto;
+import Modelo.PresupuestoBD;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -60,7 +61,7 @@ public class ServletTratamientos extends HttpServlet {
   {
     int cod = Integer.parseInt(request.getParameter("txtCodigoPresupuesto"));
     
-    boolean rpta = PacienteBD.EliminarPresupuesto(cod);
+    boolean rpta = PresupuestoBD.EliminarPresupuesto(cod);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men = Se elimino el Presupuesto correctamente");
     } else {
@@ -82,7 +83,7 @@ public class ServletTratamientos extends HttpServlet {
     String Estado = request.getParameter("txtEstado");
     
     Presupuesto p = new Presupuesto(codigo, pieza, presupuesto, precio.doubleValue(), usuario, fecha2, Estado);
-    boolean rpta = PacienteBD.actualizarPresupuesto(p);
+    boolean rpta = PresupuestoBD.actualizarPresupuesto(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=Se actualizo de manera correcta");
     } else {
@@ -102,7 +103,7 @@ public class ServletTratamientos extends HttpServlet {
     
     Presupuesto p = new Presupuesto(cod, pieza, tratamiento, precio, usuario);
     
-    boolean rpta = PacienteBD.InseretarPresupuesto(p);
+    boolean rpta = PresupuestoBD.InseretarPresupuesto(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=se Registro  correctamente");
     } else {

@@ -9,6 +9,7 @@ import Modelo.Imagenes;
 import Modelo.PacienteBD;
 import Modelo.Presupuesto;
 import Modelo.Usuarios;
+import Modelo.UsuariosBD;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class ServletUsuarios extends HttpServlet {
   {
     int cod = Integer.parseInt(request.getParameter("txtCodigoUsuario"));
     
-    boolean rpta = PacienteBD.EliminarUsuario(cod);
+    boolean rpta = UsuariosBD.EliminarUsuario(cod);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men = Se elimino el Usuario correctamente");
     } else {
@@ -89,7 +90,7 @@ public class ServletUsuarios extends HttpServlet {
     String estado = request.getParameter("txtEstado");
     
     Usuarios p = new Usuarios(codigo, apellido, nombre, pais, perfil, correo, clave, fecha, estado);
-    boolean rpta = PacienteBD.actualizarUsuario(p);
+    boolean rpta = UsuariosBD.actualizarUsuario(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=Se actualizo de manera correcta");
     } else {
@@ -105,7 +106,7 @@ public class ServletUsuarios extends HttpServlet {
     throws ServletException, IOException
   {
     ArrayList<Usuarios> lista = new ArrayList();
-    lista = PacienteBD.obtenerUsuarios();
+    lista = UsuariosBD.obtenerUsuarios();
     request.setAttribute("lista", lista);
     request.getRequestDispatcher("mostrarUsuarios.jsp").forward(request, response);
   }
@@ -124,7 +125,7 @@ public class ServletUsuarios extends HttpServlet {
     
     Usuarios p = new Usuarios(ape, nom, pais, perfil, correo, clave, estado);
     
-    boolean rpta = PacienteBD.insertarUsuarios(p);
+    boolean rpta = UsuariosBD.insertarUsuarios(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=se Registro  correctamente");
     } else {

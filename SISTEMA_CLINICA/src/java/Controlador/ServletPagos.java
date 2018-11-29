@@ -10,6 +10,7 @@ import Modelo.FormularioPaciente;
 import Modelo.HistorialPaciente;
 import Modelo.Imagenes;
 import Modelo.PacienteBD;
+import Modelo.PagosBD;
 import Modelo.PagosDia;
 import Modelo.Presupuesto;
 import Modelo.Usuarios;
@@ -65,7 +66,7 @@ public class ServletPagos extends HttpServlet {
     
     PagosDia p = new PagosDia(cod, codigoPaciente, precio, usuario);
     
-    int rpta = PacienteBD.insertarPagoPaciente(p);
+    int rpta = PagosBD.insertarPagoPaciente(p);
     if (rpta > 0)
     {
       int num_recibo = rpta;
@@ -84,7 +85,7 @@ public class ServletPagos extends HttpServlet {
     throws ServletException, IOException
   {
     ArrayList<PagosDia> lista = new ArrayList();
-    lista = DetallePaciente.obtenerIntervaloPago(request.getParameter("txtFecha"), request.getParameter("txtFecha2"));
+    lista = PagosBD.obtenerIntervaloPago(request.getParameter("txtFecha"), request.getParameter("txtFecha2"));
     
     request.setAttribute("lista", lista);
     request.getRequestDispatcher("PagosPagosIntervalo.jsp").forward(request, response);
@@ -95,7 +96,7 @@ public class ServletPagos extends HttpServlet {
     throws ServletException, IOException
   {
     ArrayList<PagosDia> lista = new ArrayList();
-    lista = DetallePaciente.obtenerUndiaPago(request.getParameter("txtFecha"));
+    lista = PagosBD.obtenerUndiaPago(request.getParameter("txtFecha"));
     request.setAttribute("lista", lista);
     request.getRequestDispatcher("PagosPagosDia.jsp").forward(request, response);
   }

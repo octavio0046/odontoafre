@@ -51,4 +51,80 @@ public class PresupuestoBD
       return Dato1 = 10.0D;
     }
   }
+  
+  
+  public static boolean EliminarPresupuesto(int cod)
+  {
+    boolean rpta = false;
+    try
+    {
+      Connection cn = Conexion.getConexion();
+      CallableStatement cl = cn.prepareCall("{call ELIMINAR_PRESUPUESTO(?)}");
+      cl.setInt(1, cod);
+      
+      int i = cl.executeUpdate();
+      if (i == 1) {
+        rpta = true;
+      } else {
+        rpta = false;
+      }
+    }
+    catch (Exception localException) {}
+    return rpta;
+  }
+
+  
+  public static boolean actualizarPresupuesto(Presupuesto varproducto)
+  {
+    boolean rpta = false;
+    try
+    {
+      Connection cn = Conexion.getConexion();
+      
+      CallableStatement cl = cn.prepareCall("{call ACTUALIZAR_PRESUPUESTO(?,?,?,?,?,?,?)}");
+      cl.setInt(1, varproducto.getCodigo());
+      cl.setString(2, varproducto.getPieza());
+      cl.setString(3, varproducto.getTratamiento());
+      cl.setDouble(4, varproducto.getPrecio());
+      cl.setString(5, varproducto.getUsuario());
+      cl.setString(6, varproducto.getFecha2());
+      cl.setString(7, varproducto.getEstado());
+      
+      int i = cl.executeUpdate();
+      if (i == 1) {
+        rpta = true;
+      } else {
+        rpta = false;
+      }
+    }
+    catch (Exception localException) {}
+    return rpta;
+  }
+  
+  
+  
+   public static boolean InseretarPresupuesto(Presupuesto p)
+  {
+    boolean rpta = false;
+    try
+    {
+      Connection cn = Conexion.getConexion();
+      CallableStatement cl = cn.prepareCall("{call INSERTAR_PRESUPUESTO(?,?,?,?,?)}");
+      cl.setInt(1, p.getCodigo_paciente());
+      cl.setString(2, p.getPieza());
+      cl.setString(3, p.getTratamiento());
+      cl.setDouble(4, p.getPrecio());
+      cl.setString(5, p.getUsuario());
+      
+      int i = cl.executeUpdate();
+      if (i == 1) {
+        rpta = true;
+      } else {
+        rpta = false;
+      }
+    }
+    catch (Exception localException) {}
+    return rpta;
+  }
+  
 }

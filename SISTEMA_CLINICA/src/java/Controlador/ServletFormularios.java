@@ -7,9 +7,11 @@ package Controlador;
 
 import Modelo.DetallePaciente;
 import Modelo.FormularioPaciente;
+import Modelo.FormulariosBD;
 import Modelo.HistorialPaciente;
 import Modelo.Imagenes;
 import Modelo.PacienteBD;
+import Modelo.PagosBD;
 import Modelo.PagosDia;
 import Modelo.Presupuesto;
 import Modelo.Usuarios;
@@ -81,7 +83,7 @@ public class ServletFormularios extends HttpServlet {
     
     FormularioPaciente p = new FormularioPaciente(codigo, ultima_vez, hilo, lengua, sangra, motivo, molestias, es, duele, inflamacion, color, aliente, ultima_vez, embarazada, medicamento, anestesia, extraido_piezas, hemorragias, enfermedad, henfermedad2, hospitalizado, porque);
     
-    boolean rpta = PacienteBD.insertarFormularioPaciente(p);
+    boolean rpta = FormulariosBD.insertarFormularioPaciente(p);
     if (rpta) {
       response.sendRedirect("mensaje2.jsp?men=se Registro el formulario del paciente correctamente");
     } else {
@@ -95,7 +97,7 @@ public class ServletFormularios extends HttpServlet {
     throws ServletException, IOException
   {
     ArrayList<PagosDia> lista = new ArrayList();
-    lista = DetallePaciente.obtenerUndiaPago(request.getParameter("txtFecha"));
+    lista = PagosBD.obtenerUndiaPago(request.getParameter("txtFecha"));
     request.setAttribute("lista", lista);
     request.getRequestDispatcher("PagosPagosDia.jsp").forward(request, response);
   }

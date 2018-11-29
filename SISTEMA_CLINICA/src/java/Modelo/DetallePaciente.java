@@ -362,48 +362,6 @@ public class DetallePaciente
     return lista;
   }
   
-  public static ArrayList<PagosDia> obtenerUndiaPago(String nom)
-  {
-    ArrayList<PagosDia> lista = new ArrayList();
-    try
-    {
-      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT A.NOMBRES,A.APELLIDOS,B.CONCEPTO_PAGO,B.PRESUPUESTO,B.PAGO,B.SALDO FROM TB_PACIENTES A, TB_PAGOS B WHERE A.COD_PACIENTE=B.COD_PACIENTE AND FECHA_PAGO=?");
-      cl.setString(1, nom);
-      ResultSet rs = cl.executeQuery();
-      while (rs.next())
-      {
-        PagosDia v = new PagosDia(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getDouble(5), rs.getDouble(6));
-        lista.add(v);
-      }
-    }
-    catch (Exception e)
-    {
-      System.out.println(e);
-    }
-    return lista;
-  }
+ 
   
-  public static ArrayList<PagosDia> obtenerIntervaloPago(String nom, String nom2)
-  {
-    ArrayList<PagosDia> lista = new ArrayList();
-    try
-    {
-      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT B.FECHA_PAGO, A.NOMBRES,A.APELLIDOS,C.TRATAMIENTO,C.PRECIO,B.PAGO,B.SALDO \nFROM TB_PACIENTES A, TB_PAGOS B ,TB_PRESUPUESTO C\n WHERE A.COD_PACIENTE=B.COD_PACIENTE AND A.COD_PACIENTE=C.COD_PACIENTE\n AND B.COD_PRESUPUESTO=C.COD_PRESUPUESTO \n AND FECHA_PAGO BETWEEN ? AND ?");
-      
-      cl.setString(1, nom);
-      cl.setString(2, nom2);
-      
-      ResultSet rs = cl.executeQuery();
-      while (rs.next())
-      {
-        PagosDia v = new PagosDia(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDouble(5), rs.getDouble(6), rs.getDouble(7));
-        lista.add(v);
-      }
-    }
-    catch (Exception e)
-    {
-      System.out.println(e);
-    }
-    return lista;
-  }
 }
