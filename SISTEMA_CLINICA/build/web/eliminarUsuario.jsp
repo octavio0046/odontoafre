@@ -31,7 +31,7 @@
             %> 
             
         
-           <form action="ServletControlador" method="get">
+           <form action="ServletUsuarios" method="get">
                <label>Segudo que desea eliminar el tratamiento con el codigo siguiente</label>
               
 

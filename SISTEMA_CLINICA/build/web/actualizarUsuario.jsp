@@ -33,7 +33,7 @@
         
          <h2 align="center">Actualizar Paciente</h2>
         
-        <form action="ServletControlador" method="post">
+        <form action="ServletUsuarios" method="post">
             <table border="0" width="400" align="center">
                 <tr>
                     <td>CodigoUsuario</td>
