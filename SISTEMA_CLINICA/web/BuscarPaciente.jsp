@@ -142,7 +142,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
             <tr bgcolor="skyblue">
                 <th>Codigo</th><th>Apellido</th>
                 <th>Apellido2</th>
-                <th>Nombre</th>
+                <th style="color: red;">Nombre</th>
                 <th>Nombre2</th><th  >Fecha</th>
                 <th>Direccion</th><th>Telefono Rec</th>
                 <th>Tel 1</th><th>Tel 2</th>
@@ -164,7 +164,7 @@ if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").e
                 <td><%=v.getCodigo_paciente()%></td> 
                 <td><%=v.getApellidos()%></td>
                 <td><%=v.getApellidos2()%></td>
-                <td><%=v.getNombres()%></td>
+                <td style="color: #FF8000;"><%=v.getNombres()%></td>
                  <td><%=v.getNombres2()%></td>
                 <td   ><%=v.getFecha()%></td> 
                 <td><%=v.getDireccion()%></td>

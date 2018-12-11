@@ -73,7 +73,7 @@
                    <br>     
             
                      <th><a href="obtenerPresupuesto.jsp?cod=<%=d.getCodigo()%>"
-                       target="detalle2">Ver Detalle</a></th>
+                      >Ver Detalle</a></th>
          
             </form>
    
