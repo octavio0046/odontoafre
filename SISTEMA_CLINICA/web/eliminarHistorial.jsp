@@ -17,12 +17,12 @@
 
 
 <html>
-    <head>
+    <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
  <%@include file="template1.jsp" %>
-    </head>
-    <body>
+    </div>
+    <div class="contenido">
 
          <center>
              <%
@@ -51,5 +51,5 @@
           }
           %>
            </center>
-    </body>
+    </div>
 </html>
