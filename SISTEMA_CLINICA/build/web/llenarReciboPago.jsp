@@ -19,12 +19,12 @@
       
    
     <html>
-        <head>
+        <div class="cabecera">
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <title>JSP Page</title>
          <%@include file="template1.jsp" %>
-        </head>
-        <body>
+        </div>
+        <div class="contenido">
         <center>
             <h2 align="center">Presupuesto del Paciente</h2>
             <table border="1" width="600" align="center">
@@ -80,7 +80,7 @@
 double Total = nuevo.obtenerSaldo(Integer.parseInt(request.getParameter("cod")),d.getCodigo_paciente());       
 %>
         <input value=<%out.println(Total);%> readonly=""> 
-        </body>
+        </div>
         </html>
  <%
             }

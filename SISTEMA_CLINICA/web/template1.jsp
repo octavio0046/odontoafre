@@ -57,7 +57,7 @@
             CONSULTAS
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="obtenerPagosInter.js">Buscar Pagos en Intervalo</a>
+          <a class="dropdown-item" href="obtenerPagosInter.jsp">Buscar Pagos en Intervalo</a>
         
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">#</a>

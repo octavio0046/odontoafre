@@ -13,13 +13,13 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
  <%@include file="template1.jsp" %>
   
-      </head>
-    <body>
+      </div>
+ <div class="contenidoo">
     
      <h2 align="center">Lista de Pagos Con Intervalo </h2>  
         
@@ -31,8 +31,6 @@
                 <th>concepto</th>
                 <th>presupuesto</th>
                 <th>pago</th><th>saldo</th>
-               
-                
                 
             </tr>
             
@@ -50,28 +48,13 @@
                 <td><%=v.getPresupuesto()%></td>
                 <td><%=v.getPago()%></td>
                 <td><%=v.getSaldo()%></td> 
-               
-               
-      
-               
+   
                 <%                    }
 
                 %>
-               
-               
-            </tr>
-      
              
-            
-   
-            
-            
-         
-            
-        </table>
-                
-                
-                
+            </tr>
+        </table>          
     <center>
         
         <h3>Suma de Pagos</h3>
@@ -86,25 +69,6 @@
     
       <input value=<%out.println(Total);//out.println(Total);%> readonly=""> 
         
-         
-    </center>       
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-    </body>
+    </center>                      
+    </div>
 </html>

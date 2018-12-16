@@ -51,7 +51,7 @@
    
         <tr>
         <center>
-            <h4>RECIBO ODONTOAFRE</h4>  
+            <h4>RECIBO </h4>  
           
         </center> 
         </tr>
