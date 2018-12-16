@@ -13,8 +13,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
       <%@include file="template1.jsp" %>
+      
          </head>
+         
+         
+         
     <body>
+        
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     <center>          
      
         </center>
@@ -26,16 +54,16 @@
                 
                 <input type="hidden" name="accion" value="loguin"/>
                 
-                                    
-                    <label>Usuario:</label>
+                    
+                 <label>Usuario:</label>
                 <input type="text" placeholder="Usuario" name="txtUsu"  pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
                     
-                <br>
+                <br><br>
                    <label>Contraseña:</label>
                    <input type="password" placeholder="Password" name="txtPas" required="">
                      
-                   <br>  <input type="submit"  name="btn" value="Iniciar Sesion" >    
-                
+                   <br><br>  <input type="submit"  name="btn" value="Iniciar Sesion" >    
+
                 
   
             </form>

@@ -10,16 +10,17 @@
 <%@page session="false"%>
 
 <!DOCTYPE html>
- <%@include file="template1.jsp" %>
+
 <html>
-    <head>
+    <div class="cabecera">
+         <%@include file="template1.jsp" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
        <link rel="stylesheet" href="estilos22.css"/>
   
   
-  </head>
-    <body>
+  </div>
+    <div class="contenido">
 
     <center>   <h2 align="1">USUARIOS</h2>  
         
@@ -87,5 +88,5 @@
          
                     
           
-    </body>
+    </div>
 </html>

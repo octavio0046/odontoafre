@@ -58,9 +58,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="obtenerPagosInter.js">Buscar Pagos en Intervalo</a>
-          <a class="dropdown-item" href="registrarUsuario.jsp">Registrar Usuario</a>
+        
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">3</a>
+          <a class="dropdown-item" href="#">#</a>
         </div>
       </li>
       
@@ -82,17 +82,28 @@
       
           <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   PACIENTES 2
+   PACIENTES A
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="ServletPacientes?accion=BuscarPaciente">Buscar Paciente</a>
           <a class="dropdown-item" href="formRegistrarPaciente.jsp">Registrar Paciente</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="ServletUsuarios?accion=MostrarUsuarios">Mostrar Usuarios</a>
+          
         </div>
       </li>
       
       
+      
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       USUARIOS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="registrarUsuario.jsp">Registrar Usuario</a>
+            <a class="dropdown-item" href="ServletUsuarios?accion=MostrarUsuarios">Mostrar Usuarios</a>
+
+        </div>
+      </li>
 
       
       
@@ -114,7 +125,7 @@
           <a class="dropdown-item" href="ServletPacientes?accion=BuscarPaciente">Buscar Paciente</a>
           <a class="dropdown-item" href="formRegistrarPaciente.jsp">RegistrarPaciente</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">3</a>
+          <a class="dropdown-item" href="#">#</a>
         </div>
       </li>
      
