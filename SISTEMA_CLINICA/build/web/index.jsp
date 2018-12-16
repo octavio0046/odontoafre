@@ -9,25 +9,28 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <div class="cabecera">
         
-       <%@include file="template1.jsp" %>
+    
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-            </head>
-    <body>          
-                     <center>   
-                  
-     <center>   
-    <h2 >SISTEMA CLINICA DENTAL</h2>
-
-       <h1>BIENVENIDOS</h1>
-    </center>
-        
-         
-     
-    
-    
+           <%@include file="template1.jsp" %>
+     </div>
+        <div class="contenido">
+            
+            
+            <center>
+                
+            
+            <h1>BIENVENIDOS</h1>
+            <h2>SISTEMA CLINICA DENTAL</h2>
+            </center>
+        </div>          
                  
-    </body>
+                  
+
+  
+    
+    
+  
 </html>
