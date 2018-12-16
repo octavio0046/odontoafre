@@ -49,23 +49,13 @@
         <h2 align="center">Logueo de Usuarios</h2>
     <center>
             <form action="ServletLogueo" method="post" >
-        
-                
-                
                 <input type="hidden" name="accion" value="loguin"/>
-                
-                    
                  <label>Usuario:</label>
                 <input type="text" placeholder="Usuario" name="txtUsu"  pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
-                    
                 <br><br>
                    <label>Contraseña:</label>
                    <input type="password" placeholder="Password" name="txtPas" required="">
-                     
-                   <br><br>  <input type="submit"  name="btn" value="Iniciar Sesion" >    
-
-                
-  
+                   <br><br>  <input type="submit"  name="btn" value="Iniciar Sesion" >  
             </form>
            
    </center> 

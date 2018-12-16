@@ -6,14 +6,14 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <div class="encabezado">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
 
    <%@include file="template1.jsp" %>
 
-  </head>
-    <body>
+  </div>
+   <div class="contenido">
 
 
         <h2 align="center">
@@ -33,5 +33,5 @@
           </h3>
         
         
-    </body>
+    </div>
 </html>

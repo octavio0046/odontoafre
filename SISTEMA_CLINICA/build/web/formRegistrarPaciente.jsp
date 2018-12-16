@@ -8,28 +8,29 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <div  class="cabeceras">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <%@include file="template1.jsp" %>
    
-    </head>
-    <body>
+    </div>
+        <div class="contenido">
                   
     <h2 align="center">Registrese</h2>
     <center>
         
         <div style="border: 2px;">
             
-      <form  action="ServletPacientes" method="get">
+            <form class="registrarPacientes" action="ServletPacientes" method="get">
         
           <div class="form-group">
               
     
               <label>Primer Apellido:</label>
               <input type="text" placeholder="Primer Apellido" name="txtApellido" pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
-                     <label>Segundo Apellido:</label>
-                   <input type="text"  placeholder="Segundo Apellido" name="txtApellido2" pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
+               
+              <label>Segundo Apellido:</label>
+              <input type="text"  placeholder="Segundo Apellido" name="txtApellido2" pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
           </div>
                    
           <div class="form-group">
@@ -58,18 +59,19 @@
                    <label>Telefono Celular 1</label>
                    <input type="number" placeholder="Celular"  name="txtCelular1" title="uno o mas numeros" required="">
               
+                   <label>Telefono Celular 2</label>
+                   <input type="number" placeholder="Celular2"  name="txtCelular2" title="uno o mas numeros" required="" >
+                   
+                   
+                   
           </div> 
             
              
                  
              
-          <div class="form-group">
-               <label>Telefono Celular 2</label>
-                   <input type="number" placeholder="Celular2"  name="txtCelular2" title="uno o mas numeros" required="" >
-                    <label>Doctor Que Refirio</label>
-                    <input type="text" placeholder="Referencia"   name="txtReferencia"  required="" title="campo obligatorio">
+         
                
-         </div>
+        
           <div class="form-group">
               
                      <label>Ocupacion</label>
@@ -79,6 +81,12 @@
                     <label>DPI</label>
                     <th><input type="text" placeholder="DPI"  name="txtdpi" required="" title="Debe llevar un numero por lo menos" </th> 
 
+                    
+                     <label>Doctor Que Refirio</label>
+                    <input type="text" placeholder="Referencia"   name="txtReferencia"  required="" title="campo obligatorio">
+               
+                    
+                    
 
           </div>
                        <input type="submit" value="Registrar"  name="Registrarse" />
@@ -103,5 +111,5 @@
          
          
          
-    </body>
+    </div>
 </html>
