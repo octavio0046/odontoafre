@@ -24,69 +24,69 @@
 
     <center>   <h2 align="1">USUARIOS</h2>  
         
-        <table border="1" width="600" align="center">
-            
-            <tr bgcolor="skyblue">
-                <th>Codigo</th><th>Apellido</th>
-                <th>Nombre</th>
-                <th>Pais</th>
-                <th>Perfil</th><th>Correo</th>
-                <th>Clave</th><th>Fecha</th><th>Estado</th>
+
+          
          
-              
-                
-                
-            </tr>
-            
-            <%
+           <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">APELLIDO</th>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">PAIS</th>
+       <th scope="col">PERFIL</th>
+        <th scope="col">CORREO</th>
+         <th scope="col">CLAVE</th>
+          <th scope="col">FECHA CREACION</th>
+           <th scope="col">ESTADO</th>
+           <th scope="col" colspan="2">ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+          <%
             
             ArrayList<Usuarios> lista =(ArrayList<Usuarios>)request.getAttribute("lista");
             for(Usuarios v: lista){
-            %>    
-            <tr>
-                <td><%=v.getCodigo_usuario()%></td>
-                <td><%=v.getApellido_usuario()%></td>
-                <td><%=v.getNombre_usuario()%></td>
-                 <td><%=v.getPais()%></td>
-                <td><%=v.getPerfil()%></td> 
-                  <td><%=v.getCorreo()%></td>
-                  <td><%=v.getClave()%></td>
-                             <td><%=v.getFecha()%></td>
-                  <td><%=v.getEstado()%></td>
-                  
-     <th><a href="eliminarUsuario.jsp?cod=<%=v.getCodigo_usuario()%>">
+            %> 
+    <tr>
+
+      <td><%=v.getCodigo_usuario()%></td>
+      <td><%=v.getApellido_usuario()%></td>
+      <td><%=v.getNombre_usuario()%></td>
+      <td><%=v.getPais()%></td>
+      <td><%=v.getPerfil()%></td>
+      <td><%=v.getCorreo()%></td>
+      <td><%=v.getClave()%></td>
+      <td><%=v.getFecha()%></td>
+      <td><%=v.getEstado()%></td>
+      <td>
+          
+          <a href="eliminarUsuario.jsp?cod=<%=v.getCodigo_usuario()%>">
                 <img src="eliminar.jpg" whit="30" height="30">
-               </a></th>
-                       
-            
-                 <th><a href="actualizarUsuario.jsp?cod=<%=v.getCodigo_usuario()%>">
-                <img src="actualizar.png" whit="30" height="30">
-               </a></th>
-            
-            
-               
-            </tr>
+               </a>
+          
+      </td>
       
-             
-            
-              
-            
-            
-              <%
+      
+      <td>
+          <a href="actualizarUsuario.jsp?cod=<%=v.getCodigo_usuario()%>">
+                <img src="actualizar.png" whit="30" height="30">
+               </a>
+      </td>
+    </tr>
+ 
+  </tbody>
+       <%
             }
             
             
             %>
           
+</table> 
             
             
-        </table>
-                    
-          
-                </center>
-          
-         
-                    
+            
+            
           
     </div>
 </html>
