@@ -70,7 +70,7 @@
             <label for="cepillarse2">NO</label>
 
             <br><label>5.Motivo de consulta</label>         
-            <input type="text"  name="txtMotivo" pattern="[A-Z ]+" title="SOLO MAYUSCULAS" ></th>
+            <input type="text" style="text-transform:uppercase;"  name="txtMotivo"></th>
 
             <br><label>6. Tiene alguna Molestia</label>        
 
@@ -131,7 +131,7 @@
             <input type="radio"  name="txtMedicamento" id="medi" value="SI" >
             <label for="medi">SI</label>
             <input type="radio"  name="txtMedicamento" id="medi2" value="NO" >
- 
+
             <br><label>15.Le han colocado anestesia</label>
 
             <input type="radio"  name="txtAnestesia" id="anes" value="SI" >
@@ -190,7 +190,7 @@
             <label for="Hospi2">NO</label>
 
             <br><label>  21. Por que?</label>      
-            <input type="text"  name="txtPorque" required="Complete este Campo" pattern="[A-Z ]+" title="SOLO MAYUSCULAS" ></th>
+            <input type="text" style="text-transform:uppercase;"  name="txtPorque" required="Complete este Campo"   ></th>
 
             <input type="submit" value="Registrar" name="Registrarse" />
 
