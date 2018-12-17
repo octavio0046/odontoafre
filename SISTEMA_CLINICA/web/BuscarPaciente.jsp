@@ -34,7 +34,7 @@
                 <label>Busque por Nombre</label>
                 <input type="text" placeholder="Nombre Paciente" name="txtNombre"  pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
 
-                <input type="submit"  name="btn" value="Buscar" >    
+                <input type="submit"  class="btn btn-success"  value="Buscar" >    
                 <h6>1. Busque por medio del primer nombre del paciente </h6>
                 <h6>2. El nombre debe escribirlo igual como lo escribio el paciente al registrarse </h6>
 

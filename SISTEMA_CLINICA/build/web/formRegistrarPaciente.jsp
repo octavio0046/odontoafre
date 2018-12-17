@@ -30,23 +30,23 @@
               <input   type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"     placeholder="Primer Apellido" name="txtApellido"   required=""  ">
                
               <label>Segundo Apellido:</label>
-              <input type="text" style="text-transform:uppercase;" placeholder="Segundo Apellido" name="txtApellido2"   required=""  >
+              <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Segundo Apellido" name="txtApellido2"   required=""  >
           </div>
                    
           <div class="form-group">
               
            
                    <label>PrimerNombre</label>
-                   <input type="text" style="text-transform:uppercase;" placeholder="Primer Nombre" name="txtNombre"  required=""  >
+                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Primer Nombre" name="txtNombre"  required=""  >
                    <label>Segundo Nombre</label>
-                   <input type="text" style="text-transform:uppercase;"  placeholder="Segundo Nombre" name="txtNombre2"  required=""  >
+                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Segundo Nombre" name="txtNombre2"  required=""  >
           </div>    
 
            <div class="form-group">
                    <label>Fecha de Nacimiento</label>
                  <input type="date"  placeholder="Nacimiento" name="txtNacimiento"> 
                  <label> Direccion Domiciliar</label>
-                 <input type="text" style="text-transform:uppercase;"  placeholder="Direccion" name="txtDireccion"   required="" title="COMPLETE CON LA ZONA DE RECIDENCIA" >
+                 <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   placeholder="Direccion" name="txtDireccion"   required="" title="COMPLETE CON LA ZONA DE RECIDENCIA" >
         
            </div>
                 
@@ -75,7 +75,7 @@
           <div class="form-group">
               
                      <label>Ocupacion</label>
-                     <th><input type="text" style="text-transform:uppercase;" placeholder="Ocupacion"  name="txtOcupacion"  required="" title="campo obligatorio" ></th> 
+                     <th><input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Ocupacion"  name="txtOcupacion"  required="" title="campo obligatorio" ></th> 
 
                       
                     <label>DPI</label>
@@ -83,7 +83,7 @@
 
                     
                      <label>Doctor Que Refirio</label>
-                    <input type="text" placeholder="Referencia" style="text-transform:uppercase;"  name="txtReferencia"  required="" title="campo obligatorio">
+                    <input type="text" placeholder="Referencia"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   name="txtReferencia"  required="" title="campo obligatorio">
                
                     
                     

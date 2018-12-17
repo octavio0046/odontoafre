@@ -59,7 +59,7 @@
                             <%
                                 }
                             %>
-                        <td> <input type="submit" value="Realizar Pago" name="Registrarse" onclick="mostrarMensaje()" /></td>
+                        <td> <input type="submit"  class="btn btn-danger"   value="Realizar Pago" name="Registrarse" onclick="mostrarMensaje()" /></td>
                  
                     
                     <input type="hidden" name="accion" value="RegistrarPagoPresupuesto"/>

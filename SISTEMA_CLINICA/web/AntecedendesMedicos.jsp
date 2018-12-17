@@ -70,7 +70,7 @@
             <label for="cepillarse2">NO</label>
 
             <br><label>5.Motivo de consulta</label>         
-            <input type="text" style="text-transform:uppercase;"  name="txtMotivo"></th>
+            <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   name="txtMotivo"></th>
 
             <br><label>6. Tiene alguna Molestia</label>        
 
@@ -190,7 +190,7 @@
             <label for="Hospi2">NO</label>
 
             <br><label>  21. Por que?</label>      
-            <input type="text" style="text-transform:uppercase;"  name="txtPorque" required="Complete este Campo"   ></th>
+            <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  name="txtPorque" required="Complete este Campo"   ></th>
 
             <input type="submit" value="Registrar" name="Registrarse" />
 

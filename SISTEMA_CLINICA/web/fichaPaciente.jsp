@@ -67,7 +67,7 @@
                      
                     <center>
                                    
-                     <br>   <input type="submit"  name="btn" value="Ingresar" >    
+                     <br>   <input type="submit"  class="btn btn-outline-success" value="Ingresar" >    
                        </center>
                  
                    <br>     
@@ -156,7 +156,7 @@
                     <td colspan="10"> 
 
 
-                        <input type="submit" value="Registrar" name="Registrarse" />
+                        <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
 
                     </td>
 
