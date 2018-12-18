@@ -27,26 +27,26 @@
               
     
               <label>Primer Apellido:</label>
-              <input   type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"     placeholder="Primer Apellido" name="txtApellido"   required=""  ">
+              <input   type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"     name="txtApellido"   required=""  ">
                
               <label>Segundo Apellido:</label>
-              <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Segundo Apellido" name="txtApellido2"   required=""  >
+              <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   name="txtApellido2"   required=""  >
           </div>
                    
           <div class="form-group">
               
            
                    <label>PrimerNombre</label>
-                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Primer Nombre" name="txtNombre"  required=""  >
+                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   name="txtNombre"  required=""  >
                    <label>Segundo Nombre</label>
-                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Segundo Nombre" name="txtNombre2"  required=""  >
+                   <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  name="txtNombre2"  required=""  >
           </div>    
 
            <div class="form-group">
                    <label>Fecha de Nacimiento</label>
                  <input type="date"  placeholder="Nacimiento" name="txtNacimiento"> 
                  <label> Direccion Domiciliar</label>
-                 <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   placeholder="Direccion" name="txtDireccion"   required="" title="COMPLETE CON LA ZONA DE RECIDENCIA" >
+                 <input type="text"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"    name="txtDireccion"   required="" title="COMPLETE CON LA ZONA DE RECIDENCIA" >
         
            </div>
                 
@@ -54,13 +54,13 @@
           <div class="form-group">
               
              <label>Telefono Recidencial</label>
-             <input type="number" placeholder="Telefono"   name="txtRecidencial"  required="" title="uno o mas numeros" >
+             <input type="number"    name="txtRecidencial"  required="" title="uno o mas numeros" >
                   
                    <label>Telefono Celular 1</label>
-                   <input type="number" placeholder="Celular"  name="txtCelular1" title="uno o mas numeros" required="">
+                   <input type="number"   name="txtCelular1" title="uno o mas numeros" required="">
               
                    <label>Telefono Celular 2</label>
-                   <input type="number" placeholder="Celular2"  name="txtCelular2" title="uno o mas numeros" required="" >
+                   <input type="number"   name="txtCelular2" title="uno o mas numeros" required="" >
                    
                    
                    
@@ -75,11 +75,11 @@
           <div class="form-group">
               
                      <label>Ocupacion</label>
-                     <th><input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  placeholder="Ocupacion"  name="txtOcupacion"  required="" title="campo obligatorio" ></th> 
+                     <th><input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"    name="txtOcupacion"  required="" title="campo obligatorio" ></th> 
 
                       
                     <label>DPI</label>
-                    <th><input type="number"  placeholder="DPI"  name="txtdpi" required="" title="Debe llevar un numero por lo menos" </th> 
+                    <th><input type="number"    name="txtdpi" required="" title="Debe llevar un numero por lo menos" </th> 
 
                     
                      <label>Doctor Que Refirio</label>
@@ -89,7 +89,7 @@
                     
 
           </div>
-                       <input type="submit" value="Registrar"  name="Registrarse" />
+                       <input type="submit" class="btn btn-outline-success" value="Registrar"  name="Registrarse" />
         
                 
 
