@@ -14,42 +14,55 @@
     <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-       <link rel="stylesheet" href="estilos22.css"/>
+        <link rel="stylesheet" href="estilos22.css"/>
         <%@include file="template1.jsp" %>
- 
-     </div>
-        <div class="contenido">
+
+    </div>
+    <div class="contenido">
 
 
-<center>
- <form  action="ServletUsuarios" method="get">
-    
-   
-     <br>          <h1>REGISTRAR USUARIO</h1>
-                     <label>APELLIDO</label>
-                   <input type="text" placeholder="Apellido" name="txtApellido" pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
-                    <label>NOMBRE</label>
-                   <input type="text" placeholder="Nombre" name="txtNombre"  required=""  title="SOLO MAYUSCULAS">
-        <br>               <label>PAIS</label>
-                   <input type="text" placeholder="Pais" name="txtPais" pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
+        <center>
+            <form  action="ServletUsuarios" method="get">
+
+
+                <br>          <h1>REGISTRAR USUARIO</h1>
+                <label>APELLIDO</label>
+                <input type="text" name="txtApellido" pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
+                <label>NOMBRE</label>
+                <input type="text"  name="txtNombre"  required=""  title="SOLO MAYUSCULAS">
+                <br><br>               <label>PAIS</label>
+                <input type="text"  name="txtPais" pattern="[A-Z]+"  required=""  title="SOLO MAYUSCULAS">
                 <label>PERFIO(ROL)</label>
-                <input type="text" placeholder="FERFIL" name="txtPerfil" value="ASISTENTE" required="" readonly=""> 
-      <br>     <label> CORREO</label>
-                <input type="email" placeholder="CORREO" name="txtCorreo"   required=""  >
+                <input type="text"  name="txtPerfil" value="ASISTENTE" required="" readonly=""> 
+                <br><br>     <label> CORREO</label>
+                <input type="email"  name="txtCorreo"   required=""  >
 
-                  <label>CLAVE</label>
-                   <input type="text" placeholder="CLAVE"  name="txtClave" >
-                   <br> <label>ESTADO</label>
-                  <input type="text" placeholder="ESTADO"  value="ACTIVO" name="txtEstado"pattern="[A-Z]+"  readonly=""  title="SOLO MAYUSCULAS" >
+                <label>CLAVE</label>
+                <input type="text"   name="txtClave" >
 
-                     <br>   <input type="submit" value="Registrar" name="Registrarse" />
 
-                 <input type="hidden" name="accion" value="RegistrarUsuario"/> 
+                <input type="text"    value="ACTIVO" name="txtEstado"pattern="[A-Z]+"  readonly="" hidden=""  title="SOLO MAYUSCULAS" >
 
- 
-                 
-                 <h6>El ADMINISTRADOR solo puede crear usuarios de tipo ASISTENTE  </h6>
-     </form> 
+                <br>   <br>   <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
+
+
+
+                <input type="hidden"  name="accion" value="RegistrarUsuario"/> 
+
+
+
+                <h6>El ADMINISTRADOR solo puede crear usuarios de tipo ASISTENTE  </h6>
+            </form> 
+
+
+
+
+
+
+
+
+
+
         </center>
     </div>
 </html>
