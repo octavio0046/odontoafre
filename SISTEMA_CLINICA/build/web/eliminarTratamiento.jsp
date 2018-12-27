@@ -29,14 +29,16 @@
             %> 
             
         
-           <form action="ServletControlador" method="get">
-               <label>Segudo que desea eliminar el tratamiento con el codigo siguiente</label>
+           <form action="ServletTratamientos" method="get">
+               <label>Seguro que desea eliminar el tratamiento con el codigo siguiente</label>
               
 
                <input type="text"  name="txtCodigoPresupuesto" style="width:80px;height:15px" value="<%= d.getCodigo()%>" readonly="">
                 
-                <br>   <input type="submit" value="ELIMINAR" name="Registrarse" />
-                             <input type="hidden" name="accion" value="EliminarPresupuesto"/> 
+               <br>  <input type="text"   value="<%= d.getTratamiento()%>" style="width:500px;height:100px" readonly="">
+               
+                <br> <br>   <input type="submit" class="btn btn-danger" value="ELIMINAR" name="Registrarse" />
+                             <input type="hidden"  name="accion" value="EliminarPresupuesto"/> 
            </form>
            
            

@@ -49,7 +49,7 @@
                     
                 </tr>    <tr>
                     <td>Tratamiento presupuestado</td>
-                    <td><input type="text" name="txtPresupuesto" value="<%=d.getTratamiento()%>"></td>
+                    <td><input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" name="txtPresupuesto" value="<%=d.getTratamiento()%>"></td>
                     
                 </tr> <tr>
                     <td>Precio Total del Tratamiento</td>
@@ -58,17 +58,13 @@
                 </tr>
                  <tr>
                     <td>Usuario quien realizo el tratamiento</td>
-                    <td><input type="text" name="txtUsuario" value="<%=d.getUsuario()%>"></td>
+                    <td><input type="text" name="txtUsuario" value="<%=d.getUsuario()%>" readonly=""></td>
                     
                 </tr>
-                 <tr>
-                    <td>Fecha de Presupuesto</td>
-                    <td><input type="date" name="txtFecha" value="<%=d.getFecha()%>"></td>
-     
-                </tr>
+            
                  <tr>
                     <td>Estado</td>
-                    <td><input type="text" name="txtEstado" value="<%=d.getEstado()%>"></td>
+                    <td><input type="text" name="txtEstado" value="<%=d.getEstado()%>" readonly=""></td>
                     
                 </tr>
                  

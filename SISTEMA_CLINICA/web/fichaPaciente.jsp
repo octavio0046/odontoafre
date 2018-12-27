@@ -21,9 +21,7 @@
      <%@include file="template1.jsp" %>
     </div>
     <div class="contenido">
- 
-  
-                    
+           
            <%
                
                    
@@ -35,7 +33,7 @@
                 FormularioPaciente d = lista.get(i);
              
            %>           
-                    
+                
     <center>   
                 <h2 align="center">PRESUPUESTO PACIENTE</h2>
            
@@ -56,7 +54,7 @@
                     <input type="number" step='0.01' value='0.00' placeholder="NO.PIEZA" name="txtPieza"  style="width:200px;height:15px"  >
                   
                     <br>    <label>TRATAMIENTO</label> 
-                  <textarea type="text" placeholder="TRATAMIENTO" name="txtTratamiento"  style="width:500px;height:100px" pattern="[A-Z ]+"  title="SOLO MAYUSCULAS"></textarea>
+                  <textarea type="text" placeholder="TRATAMIENTO" name="txtTratamiento" style="width:500px;height:100px; text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
                
                   <br>   <label>PRECIO</label>
                      <input type="number" step='0.01' value='0.00' placeholder="PRECIO" name="txtPrecio" style="width:200px;height:15px"  >

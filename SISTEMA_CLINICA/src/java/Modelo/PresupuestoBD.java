@@ -81,14 +81,13 @@ public class PresupuestoBD
     {
       Connection cn = Conexion.getConexion();
       
-      CallableStatement cl = cn.prepareCall("{call ACTUALIZAR_PRESUPUESTO(?,?,?,?,?,?,?)}");
+      CallableStatement cl = cn.prepareCall("{call ACTUALIZAR_PRESUPUESTO(?,?,?,?,?,?)}");
       cl.setInt(1, varproducto.getCodigo());
       cl.setString(2, varproducto.getPieza());
       cl.setString(3, varproducto.getTratamiento());
       cl.setDouble(4, varproducto.getPrecio());
       cl.setString(5, varproducto.getUsuario());
-      cl.setString(6, varproducto.getFecha2());
-      cl.setString(7, varproducto.getEstado());
+      cl.setString(6, varproducto.getEstado());
       
       int i = cl.executeUpdate();
       if (i == 1) {

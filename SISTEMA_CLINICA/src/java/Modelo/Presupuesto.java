@@ -26,6 +26,10 @@ public class Presupuesto
     this.pago = pago;
   }
   
+  
+    public Presupuesto(){}
+  
+  
   public Presupuesto(int cod_paciente, String pieza, String tratamiento, double precio, String usuario)
   {
     this.codigo_paciente = cod_paciente;
@@ -56,14 +60,15 @@ public class Presupuesto
     this.estado = estado;
   }
   
-  public Presupuesto(int codigo, String pieza, String tratamiento, double precio, String usuario, String fecha2, String estado)
+  
+  //constructor para actualizar el tratamiento
+  public Presupuesto(int codigo, String pieza, String tratamiento, double precio, String usuario, String estado)
   {
     this.codigo = codigo;
     this.pieza = pieza;
     this.tratamiento = tratamiento;
     this.precio = precio;
     this.usuario = usuario;
-    this.fecha2 = fecha2;
     this.estado = estado;
   }
   
