@@ -49,15 +49,46 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+
+  response.setHeader("Pragma", "no-cahe");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+
+
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("<html>\n");
-      out.write("    <head>\n");
+      out.write("    <div class=\"cabecera\">\n");
       out.write("        \n");
-      out.write("       ");
+      out.write("    \n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>JSP Page</title>\n");
+      out.write("        ");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+  try {
+           if(session.getAttribute("nom")==null){
+      
+
+      request.getRequestDispatcher("index.jsp").forward(request, response);
+      
+  }
+  }catch(Exception e){
+      
+    request.getRequestDispatcher("index.jsp").forward(request, response);  
+  }
+
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
 
@@ -76,25 +107,54 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("<html>\n");
-      out.write("    <head>\n");
+      out.write("    <div class=\"cabecera\">\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
       out.write("         <link rel=\"stylesheet\" href=\"estilos22.css\"/>\n");
       out.write("         \n");
+      out.write("         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">\n");
+      out.write("         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>\n");
       out.write("         \n");
-      out.write(" <table border=\"0\" width=\"1000\" align=\"center\">\n");
-      out.write("     <tr bgcolor=\"skyblue\" style=\"width: 50px; height: 50px;\">\n");
-      out.write("                <th><a href=\"index.jsp\"> Inicio</a> </th>\n");
-      out.write("                    ");
+      out.write("<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary \" >\n");
+      out.write("  <a class=\"navbar-brand\" href=\"index.jsp\">INICIO</a>\n");
+      out.write("  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
+      out.write("    <span class=\"navbar-toggler-icon\"></span>\n");
+      out.write("  </button>\n");
+      out.write("  \n");
+      out.write("\n");
+      out.write("  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n");
+      out.write("    <ul class=\"navbar-nav mr-auto\">\n");
+      out.write(" \n");
+      out.write("   \n");
+      out.write("      \n");
+      out.write("    \n");
+      out.write("              ");
                    if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").equals("ADMIN")) {
 
 
                     
       out.write("\n");
-      out.write("                \n");
-      out.write("                  <th><a href=\"obtenerPagosInter.jsp\"> Buscar Pagos En Intervalo</a> </th>\n");
-      out.write("                <th><a href=\"registrarUsuario.jsp\"> Regisrar Usuario</a> </th>\n");
-      out.write("                \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("        <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("            CONSULTAS\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("          <a class=\"dropdown-item\" href=\"obtenerPagosInter.jsp\">Buscar Pagos en Intervalo</a>\n");
+      out.write("        \n");
+      out.write("          <div class=\"dropdown-divider\"></div>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">#</a>\n");
+      out.write("        </div>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("               \n");
       out.write("                    ");
                 }
 
@@ -111,11 +171,35 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                 
       out.write("\n");
+      out.write("      \n");
+      out.write("          <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("   PACIENTES A\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("          <a class=\"dropdown-item\" href=\"ServletPacientes?accion=BuscarPaciente\">Buscar Paciente</a>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"formRegistrarPaciente.jsp\">Registrar Paciente</a>\n");
+      out.write("          <div class=\"dropdown-divider\"></div>\n");
+      out.write("          \n");
+      out.write("        </div>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("         <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("       USUARIOS\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("            <a class=\"dropdown-item\" href=\"registrarUsuario.jsp\">Registrar Usuario</a>\n");
+      out.write("            <a class=\"dropdown-item\" href=\"ServletUsuarios?accion=MostrarUsuarios\">Mostrar Usuarios</a>\n");
       out.write("\n");
-      out.write("                   <th><a href=\"ServletControlador?accion=MostrarUsuarios\"> Mostrar Usuarios</a> </th>\n");
-      out.write("                <th><a href=\"ServletControlador?accion=BuscarPaciente\"> Buscar Paciente</a> </th>\n");
+      out.write("        </div>\n");
+      out.write("      </li>\n");
       out.write("\n");
-      out.write("                ");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("             ");
                     }
 
                 if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").equals("ASISTENTE")) {
@@ -124,9 +208,24 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                 
       out.write("\n");
-      out.write("<th><a href=\"ServletControlador?accion=BuscarPaciente\"> Buscar Paciente</a> </th>\n");
-      out.write("                \n");
-      out.write("                 ");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("        <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("        PACIENTES\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("          <a class=\"dropdown-item\" href=\"ServletPacientes?accion=BuscarPaciente\">Buscar Paciente</a>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"formRegistrarPaciente.jsp\">RegistrarPaciente</a>\n");
+      out.write("          <div class=\"dropdown-divider\"></div>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">#</a>\n");
+      out.write("        </div>\n");
+      out.write("      </li>\n");
+      out.write("     \n");
+      out.write("      \n");
+      out.write("          \n");
+      out.write("                      ");
                     }
 
 
@@ -141,13 +240,24 @@ if (sesionOK.getAttribute("perfil") != null) {
                         //si alguien ya inicio sesion entonces mostrar su nombre 
                 
       out.write("\n");
-      out.write("                <th><a href=\"ServletLogueo?accion=cerrar\"> Cerrar Sesion</a> </th>\n");
-      out.write("                <th width=\"200\">");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link disabled\" href=\"ServletLogueo?accion=cerrar\">CERRAR SESION</a>\n");
+      out.write("        \n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("       <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link disabled\" >");
 out.println("Bienvenido:  " + nom);
+      out.write("</a>\n");
+      out.write("        \n");
+      out.write("      </li>\n");
+      out.write("      \n");
       out.write("\n");
-      out.write("\n");
-      out.write("                </th> \n");
-      out.write("                ");
+      out.write("    </ul>\n");
+      out.write("    \n");
+      out.write("                     ");
 
                     }
                 
@@ -161,100 +271,87 @@ out.println("Bienvenido:  " + nom);
 
                 
       out.write("\n");
-      out.write("                <th with=\"200\"><a href=\"login.jsp\"> Iniciar Sesion</a> </th>\n");
-      out.write("                    ");
+      out.write("     \n");
+      out.write("                \n");
+      out.write("                <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link\" data-toggle=\"modal\" data-target=\"#exampleModalLong\" >INICIAR SESION</a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("   \n");
+      out.write("      \n");
+      out.write("  </div>\n");
+      out.write("</nav>\n");
+      out.write("             ");
                 }
                     
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("            </tr>  \n");
-      out.write("\n");
-      out.write("        </table>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("      \n");
+      out.write(" \n");
+      out.write("    </div>\n");
+      out.write("                    \n");
+      out.write("                    \n");
+      out.write("    <body>      \n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("        <!-- Modal -->\n");
+      out.write("<div class=\"modal fade\" id=\"exampleModalLong\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLongTitle\" aria-hidden=\"true\">\n");
+      out.write("  <div class=\"modal-dialog\" role=\"document\">\n");
+      out.write("    <div class=\"modal-content\">\n");
+      out.write("      <div class=\"modal-header\">\n");
+      out.write("          <h5  class=\"modal-title\" id=\"exampleModalLongTitle\">LOGIN</h5>\n");
+      out.write("        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n");
+      out.write("          <span aria-hidden=\"true\">&times;</span>\n");
+      out.write("        </button>\n");
+      out.write("      </div>\n");
+      out.write("      <div class=\"modal-body\">\n");
+      out.write("        \n");
+      out.write("          \n");
+      out.write("          \n");
+      out.write("             <center>\n");
+      out.write("          <form class=\"login\" action=\"ServletLogueo\" method=\"post\" >\n");
+      out.write("                <input type=\"hidden\" name=\"accion\" value=\"loguin\"/>\n");
+      out.write("           \n");
+      out.write("                <label>Usuario:</label>\n");
+      out.write("                <input type=\"text\" placeholder=\"Usuario\" name=\"txtUsu\"  pattern=\"[A-Z]+\"  required=\"\"  title=\"SOLO MAYUSCULAS\">\n");
+      out.write("                 <br><br>\n");
+      out.write("                   <label>Contraseña:</label>\n");
+      out.write("                  <input type=\"password\" placeholder=\"Password\" name=\"txtPas\" required=\"\">\n");
+      out.write("                  <br><br> <input type=\"submit\"  class=\"btn btn-success\"  value=\"Iniciar Sesion\" >  \n");
+      out.write("            </form>\n");
+      out.write("             </center>\n");
       out.write("       \n");
+      out.write("      </div>\n");
+      out.write("      <div class=\"modal-footer\">\n");
+      out.write("        <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Close</button>\n");
+      out.write("      \n");
+      out.write("      </div>\n");
+      out.write("    </div>\n");
+      out.write("  </div>\n");
+      out.write("</div>\n");
+      out.write("        \n");
+      out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
       out.write("\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
-      out.write("            </head>\n");
-      out.write("    <body>          \n");
-      out.write("                     <center>   \n");
-      out.write("                  \n");
-      out.write("     <center>   \n");
-      out.write("    <h2 >SISTEMA CLINICA DENTAL</h2>\n");
-      out.write("\n");
-      out.write("   \n");
-      out.write("    </center>\n");
-      out.write("        \n");
-      out.write("         \n");
-      out.write("               \n");
-      out.write("    <h2 align=\"center\">Registrese</h2>\n");
-      out.write("    <center>\n");
-      out.write("      <form  action=\"ServletControlador\" method=\"get\">\n");
-      out.write("    \n");
-      out.write("     <br>          <label>Primer Apellido:</label>\n");
-      out.write("                   <input type=\"text\" placeholder=\"Primer Apellido\" name=\"txtApellido\" pattern=\"[A-Z ]+\"  required=\"\"  title=\"SOLO MAYUSCULAS\">\n");
-      out.write("                     <label>Segundo Apellido:</label>\n");
-      out.write("                   <input type=\"text\" placeholder=\"Segundo Apellido\" name=\"txtApellido2\" pattern=\"[A-Z ]+\"  required=\"\"  title=\"SOLO MAYUSCULAS\">\n");
-      out.write("                    <label>PrimerNombre</label>\n");
-      out.write("                   <input type=\"text\" placeholder=\"Primer Nombre\" name=\"txtNombre\" pattern=\"[A-Z ]+\"  required=\"\"  title=\"SOLO MAYUSCULAS\">\n");
-      out.write("                   <label>Segundo Nombre</label>\n");
-      out.write("                   <input type=\"text\" placeholder=\"Segundo Nombre\" name=\"txtNombre2\" pattern=\"[A-Z ]+\"  required=\"\"  title=\"SOLO MAYUSCULAS\">\n");
-      out.write("              \n");
-      out.write("\n");
-      out.write("                   <br> <label>Fecha de Nacimiento</label>\n");
-      out.write("                 <input type=\"date\" placeholder=\"Nacimiento\" name=\"txtNacimiento\"> \n");
-      out.write("                 <label> Direccion Domiciliar</label>\n");
-      out.write("                <input type=\"text\" placeholder=\"Direccion\" name=\"txtDireccion\"   required=\"\" >\n");
-      out.write("        \n");
-      out.write("             \n");
-      out.write("                \n");
-      out.write("                \n");
-      out.write("         \n");
-      out.write("                <br>   <label>Telefono Recidencial</label>\n");
-      out.write("                   <input type=\"number\" placeholder=\"Telefono\"  name=\"txtRecidencial\" title=\"Solo Numeros\" >\n");
-      out.write("                  \n");
-      out.write("                   <label>Telefono Celular 1</label>\n");
-      out.write("                  <input type=\"number\" placeholder=\"Celular\" name=\"txtCelular1\" title=\"Solo Numeros\">\n");
-      out.write("               \n");
+      out.write("     </div>\n");
+      out.write("        <div class=\"contenido\">\n");
       out.write("            \n");
-      out.write("             \n");
-      out.write("                 \n");
-      out.write("             \n");
-      out.write("                  <br>  <label>Telefono Celular 2</label>\n");
-      out.write("                   <input type=\"number\" placeholder=\"Celular2\" name=\"txtCelular2\">\n");
-      out.write("                    <label>Doctor Que Refirio</label>\n");
-      out.write("                   <input type=\"text\" placeholder=\"Referencia\" name=\"txtReferencia\">\n");
-      out.write("               \n");
-      out.write("                 \n");
-      out.write("                    <br>  <label>Ocupacion</label>\n");
-      out.write("                     <th><input type=\"text\" placeholder=\"Ocupacion\" name=\"txtOcupacion\"  ></th> \n");
-      out.write("\n");
-      out.write("                      \n");
-      out.write("                    <br>  <label>DPI</label>\n");
-      out.write("                    <th><input type=\"text\" placeholder=\"DPI\" name=\"txtdpi\" </th> \n");
-      out.write("\n");
-      out.write("\n");
-      out.write("                     <br>   <input type=\"submit\" value=\"Registrar\" name=\"Registrarse\" />\n");
-      out.write("        \n");
+      out.write("            \n");
+      out.write("            <center>\n");
       out.write("                \n");
+      out.write("            \n");
+      out.write("            <h1>BIENVENIDOS</h1>\n");
+      out.write("            <h2>SISTEMA CLINICA DENTAL</h2>\n");
+      out.write("            </center>\n");
+      out.write("        </div>          \n");
+      out.write("                 \n");
+      out.write("                  \n");
       out.write("\n");
-      out.write("                 <input type=\"hidden\" name=\"accion\" value=\"RegistrarPaciente\"/> \n");
-      out.write("\n");
-      out.write(" \n");
-      out.write("     </form> \n");
-      out.write("    </center>\n");
+      out.write("  \n");
       out.write("    \n");
       out.write("    \n");
-      out.write("               <a href=\"#\" id=\"logo\"></a>\n");
-      out.write("    <nav>\n");
-      out.write("        <a href=\"#\" id=\"menu-icon\"></a>\n");
-      out.write("    </nav>       \n");
-      out.write("    </body>\n");
+      out.write("  \n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

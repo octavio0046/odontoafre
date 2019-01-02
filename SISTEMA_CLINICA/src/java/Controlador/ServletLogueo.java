@@ -54,12 +54,12 @@ public class ServletLogueo
     }
     else if (accion.equals("cerrar"))
     {
-      HttpSession sesionOK = request.getSession();
+      HttpSession cerrar_sesion = request.getSession();
       
-      request.getSession().removeAttribute("perfil");
-      request.getSession().removeAttribute("nom");
-      request.getSession().removeAttribute("ape");
-      sesionOK.invalidate();
+      cerrar_sesion.removeAttribute("perfil");
+      cerrar_sesion.removeAttribute("nom");
+      cerrar_sesion.removeAttribute("ape");
+      cerrar_sesion.invalidate();
       request.getRequestDispatcher("index.jsp").forward(request, response);
     }
   }

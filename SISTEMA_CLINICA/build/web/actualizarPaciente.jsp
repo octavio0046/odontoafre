@@ -3,14 +3,34 @@
     Created on : 23/05/2018, 10:58:48 AM
     Author     : OctavioHerrera
 --%>
-<%@page session="false"%>
+
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modelo.DetallePaciente"%>
 <%@page import="Modelo.Paciente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
 
+<%@page session="true"%>
 <!DOCTYPE html>
+
+<%
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+  try {
+           if(session.getAttribute("nom")==null){
+      
+
+      request.getRequestDispatcher("index.jsp").forward(request, response);
+      
+  }
+  }catch(Exception e){
+      
+    request.getRequestDispatcher("index.jsp").forward(request, response);  
+  }
+%>
 
 
 <html>

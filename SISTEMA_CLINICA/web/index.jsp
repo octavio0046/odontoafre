@@ -4,7 +4,14 @@
     Author     : Octavio Herrera
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+
+%>
 
 <!DOCTYPE html>
 
@@ -14,7 +21,7 @@
     
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-           <%@include file="template1.jsp" %>
+        <%@include file="template1.jsp" %>
      </div>
         <div class="contenido">
             

@@ -7,18 +7,35 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modelo.Paciente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page session="false"%>
+<%@page session="true"%>
 <!DOCTYPE html>
+<%
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+  try {
+           if(session.getAttribute("nom")==null){
+      
+
+      request.getRequestDispatcher("index.jsp").forward(request, response);
+      
+  }
+  }catch(Exception e){
+      
+    request.getRequestDispatcher("index.jsp").forward(request, response);  
+  }
+%>
 
 <html>
     <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="estilos22.css"/>
-
         <%@include file="template1.jsp" %>
-
-
+        <script src="js/jquery.js" ></script>
+        <script src="js/jquery.dataTables.min.js" ></script>
 
     </div>               
 
@@ -32,9 +49,9 @@
 
 
                 <label>Busque por Nombre</label>
-                <input type="text" placeholder="Nombre Paciente" name="txtNombre"  pattern="[A-Z ]+"  required=""  title="SOLO MAYUSCULAS">
+                <input type="text" placeholder="Nombre Paciente" name="txtNombre"   style=" width: 250px; height: 50px;text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" >
 
-                <input type="submit"  class="btn btn-success"  value="Buscar" >    
+                <br> <br>  <input type="submit"  class="btn btn-success"  value="Buscar" >    
                 <h6>1. Busque por medio del primer nombre del paciente </h6>
                 <h6>2. El nombre debe escribirlo igual como lo escribio el paciente al registrarse </h6>
 
@@ -177,6 +194,9 @@
 
         </div>      
 
+                    
+                    
+                     
 
     </div>
 </html>

@@ -13,7 +13,24 @@
 <%@page import="java.util.ArrayList"%>
 <%@page session="true"%>
 <!DOCTYPE html>
+<%
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+  try {
+           if(session.getAttribute("nom")==null){
+      
 
+      request.getRequestDispatcher("index.jsp").forward(request, response);
+      
+  }
+  }catch(Exception e){
+      
+    request.getRequestDispatcher("index.jsp").forward(request, response);  
+  }
+%>
 <html>
     <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -109,34 +126,34 @@
                     
                     <td>
 
-                        <textarea type="text"   name="txtConducto" style="width:150px;height:75px"  required="" ></textarea>
+                        <textarea type="text"   name="txtConducto" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   required="" ></textarea>
 
                     </td> 
                     
                     
                        <td>
 
-                        <textarea type="text"   name="txtConductometria" style="width:150px;height:75px" required=""  ></textarea>
+                        <textarea type="text"   name="txtConductometria" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  required=""  ></textarea>
 
                     </td> 
                     
                          <td>
 
-                        <textarea type="text"   name="txtBase" style="width:150px;height:75px"   required=""  ></textarea>
+                        <textarea type="text"   name="txtBase" style="width:150px;height:75px"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  required=""  ></textarea>
 
                     </td> 
                  
                     
                          <td>
 
-                        <textarea type="text"   name="txtOtb" style="width:150px;height:75px"  required=""  ></textarea>
+                        <textarea type="text"   name="txtOtb" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"   required=""  ></textarea>
 
                     </td> 
                     
                     
                         <td>
 
-                        <textarea type="text"   name="txtObservaciones" style="width:150px;height:75px"  required=""  ></textarea>
+                        <textarea type="text"   name="txtObservaciones" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"  required=""  ></textarea>
 
                     </td> 
                  

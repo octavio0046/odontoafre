@@ -15,6 +15,24 @@
 <%@page session="true"%>
 <!DOCTYPE html>
 
+<%
+  response.setHeader("Pragma", "no-cache");
+  response.addHeader("Cache-control", "must-revalidate");
+  response.addHeader("Cache-control", "no-cache");
+  response.addHeader("Cache-control", "no-store");
+  response.setDateHeader("Expires", 0);
+  try {
+           if(session.getAttribute("nom")==null){
+      
+
+      request.getRequestDispatcher("index.jsp").forward(request, response);
+      
+  }
+  }catch(Exception e){
+      
+    request.getRequestDispatcher("index.jsp").forward(request, response);  
+  }
+%>
 
 <html>
     <div class="cabecera">
@@ -35,14 +53,14 @@
                  
             
         
-           <form action="ServletControlador" method="get">
+           <form action="ServletHistorial" method="get">
                <label>Seguro que desea eliminar el historial con el codigo siguiente</label>
               
 
                <input type="text"  name="txtCodigoHistorial" style="width:80px;height:15px" value="<%= d.getCod_historial()%>" readonly="">
                 
                
-                <br>   <input type="submit" value="ELIMINAR" name="Registrarse" />
+                <br>   <input type="submit" class="btn btn-danger" value="ELIMINAR" name="Registrarse" />
                              <input type="hidden" name="accion" value="EliminarHistorial"/> 
            </form>
            
