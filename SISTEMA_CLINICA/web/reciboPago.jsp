@@ -52,7 +52,9 @@
     <div style="float: right; width: 100px;" >
 
 
-        <img src="odontoafre.png" style="width: 75px;  height: 50px;" alt="odontoafre.png">
+     <%----------
+     <img src="odontoafre.png" style="width: 75px;  height: 50px;" alt="odontoafre.png">
+---------%>   
 
 
     </div>
