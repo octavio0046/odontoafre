@@ -31,7 +31,7 @@
     <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="estilos22.css"/>
+
         <%@include file="template1.jsp" %>
         <script src="js/jquery.js" ></script>
         <script src="js/jquery.dataTables.min.js" ></script>
@@ -41,25 +41,16 @@
     <div class="contenido">       
         <center>                 
             <h2 align="center">BUSCAR PACIENTE</h2>
-
             <form action="ServletPacientes" method="get">
                 <input type="hidden" name="accion" value="BuscarUNPaciente" />
-
-
-
                 <label>Busque por Nombre</label>
                 <input type="text" placeholder="Nombre Paciente" name="txtNombre"   style=" width: 250px; height: 50px;text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();" >
-
                 <br> <br>  <input type="submit"  class="btn btn-success"  value="Buscar" >    
                 <h6>1. Busque por medio del primer nombre del paciente </h6>
                 <h6>2. El nombre debe escribirlo igual como lo escribio el paciente al registrarse </h6>
-
             </form>
-
         </center>   
-
         <h2 align="center">Lista de Pacientes</h2>  
-
         <div class="table-responsive-xl">
             <table class="table">
                 <thead class="thead-light" >

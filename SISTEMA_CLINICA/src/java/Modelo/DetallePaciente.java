@@ -9,25 +9,7 @@ import java.util.ArrayList;
 
 public class DetallePaciente
 {
-  public static int UltimoPacienteRegistrado()
-  {
-    try
-    {
-      CallableStatement c2 = Conexion.getConexion().prepareCall("SELECT MAX(COD_PACIENTE) FROM  TB_PACIENTES ");
-      
-      ResultSet rs = c2.executeQuery();
-      
-      rs.next();
-      int Total;
-      return Total = rs.getInt(1);
-    }
-    catch (Exception e)
-    {
-      System.out.println(e);
-      int Total;
-      return Total = 'ʚ';
-    }
-  }
+
   
   public static int obtenerTotalPagosIntervalo(String num, String num2)
   {

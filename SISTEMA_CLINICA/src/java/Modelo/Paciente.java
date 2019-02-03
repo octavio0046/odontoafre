@@ -17,6 +17,11 @@ public class Paciente
   String estado;
   String dpi;
   
+  
+ public Paciente(){
+         
+ }
+  
   public String getDpi()
   {
     return this.dpi;

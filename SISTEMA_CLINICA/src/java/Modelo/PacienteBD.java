@@ -5,6 +5,7 @@ import java.io.PrintStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Types;
 import java.util.ArrayList;
 
 public class PacienteBD
@@ -97,35 +98,37 @@ public class PacienteBD
  
   
   
-  public static boolean insertarPaciente(Paciente p)
+  public static int insertarPaciente(Paciente p)
   {
     boolean rpta = false;
+    
     try
     {
       Connection cn = Conexion.getConexion();
-      CallableStatement cl = cn.prepareCall("{call INSERTAR_PACIENTE(?,?,?,?,?,?,?,?,?,?,?,?)}");
-      cl.setString(1, p.getApellidos());
-      cl.setString(2, p.getApellidos2());
-      cl.setString(3, p.getNombres());
-      cl.setString(4, p.getNombres2());
-      cl.setString(5, p.getFecha());
-      cl.setString(6, p.getDireccion());
-      cl.setInt(7, p.getTelefono_recidencial());
-      cl.setInt(8, p.getTelefono1());
-      cl.setInt(9, p.getTelefono2());
-      cl.setString(10, p.getReferido());
-      cl.setString(11, p.getOcupacion());
-      cl.setString(12, p.getDpi());
+      CallableStatement cl = cn.prepareCall("{call INSERTAR_PACIENTE(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+     cl.registerOutParameter(1, Types.INTEGER);
+      cl.setString(2, p.getApellidos());
+      cl.setString(3, p.getApellidos2());
+      cl.setString(4, p.getNombres());
+      cl.setString(5, p.getNombres2());
+      cl.setString(6, p.getFecha());
+      cl.setString(7, p.getDireccion());
+      cl.setInt(8, p.getTelefono_recidencial());
+      cl.setInt(9, p.getTelefono1());
+      cl.setInt(10, p.getTelefono2());
+      cl.setString(11, p.getReferido());
+      cl.setString(12, p.getOcupacion());
+      cl.setString(13, p.getDpi());
       
       int i = cl.executeUpdate();
       if (i == 1) {
-        rpta = true;
+        p.setCodigo_paciente(cl.getInt(1));
       } else {
         rpta = false;
       }
     }
     catch (Exception localException) {}
-    return rpta;
+    return p.getCodigo_paciente();
   }
   
   public static ArrayList<Paciente> obtenerUltimoPaciente()

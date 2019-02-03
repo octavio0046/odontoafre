@@ -129,9 +129,9 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     
     Paciente p = new Paciente(ape, ape2, nom, nom2, naci, dire, reciden, celuno, celdos, referencia, ocupa, dpi);
     
-    boolean rpta = PacienteBD.insertarPaciente(p);
-    if (rpta) {
-      response.sendRedirect("mensaje.jsp?men=se Registro paciente correctamente");
+    int variable = PacienteBD.insertarPaciente(p);
+    if (variable!=0) {
+    response.sendRedirect("AntecedendesMedicos.jsp?cod="+variable+"");
     } else {
       response.sendRedirect("mensaje.jsp?men=No se regisro el paciente correctamente");
     }
