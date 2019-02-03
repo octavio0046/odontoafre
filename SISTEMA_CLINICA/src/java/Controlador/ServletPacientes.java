@@ -143,7 +143,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     throws ServletException, IOException
   {
     ArrayList<Paciente> lista = new ArrayList();
-    lista = DetallePaciente.obtenerUnPaciente(request.getParameter("txtNombre"));
+    lista = DetallePaciente.obtenerUnPaciente(request.getParameter("txtFiltro"));
     request.setAttribute("lista", lista);
     request.getRequestDispatcher("BuscarPaciente.jsp").forward(request, response);
   }

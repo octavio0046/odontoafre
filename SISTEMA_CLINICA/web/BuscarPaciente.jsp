@@ -44,10 +44,8 @@
             <form action="ServletPacientes" method="get">
                 <input type="hidden" name="accion" value="BuscarUNPaciente" />
                 <label>Busque por Nombre</label>
-                <input type="text" placeholder="Nombre Paciente" name="txtNombre"   style=" width: 250px; height: 50px;text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();" >
+                <input type="text"  name="txtFiltro"   style=" width: 250px; height: 50px;text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();" >
                 <br> <br>  <input type="submit"  class="btn btn-success"  value="Buscar" >    
-                <h6>1. Busque por medio del primer nombre del paciente </h6>
-                <h6>2. El nombre debe escribirlo igual como lo escribio el paciente al registrarse </h6>
             </form>
         </center>   
         <h2 align="center">Lista de Pacientes</h2>  

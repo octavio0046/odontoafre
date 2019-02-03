@@ -328,8 +328,7 @@ public class DetallePaciente
     ArrayList<Paciente> lista = new ArrayList();
     try
     {
-      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT * FROM TB_PACIENTES WHERE NOMBRES=? AND ESTADO='ACTIVO'");
-      cl.setString(1, nom);
+      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT * FROM TB_PACIENTES WHERE NOMBRES LIKE '%"+nom+"%' or APELLIDOS LIKE '%"+nom+"%' or APELLIDOS2 LIKE '%"+nom+"%' or DPI LIKE '%"+nom+"%'");
       ResultSet rs = cl.executeQuery();
       while (rs.next())
       {
