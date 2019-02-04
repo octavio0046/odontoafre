@@ -26,6 +26,10 @@
     }
 %>
 <html>
+       <%  
+                String dpi= request.getParameter("dpi");
+            %>
+    
     <div  class="cabeceras">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -84,7 +88,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">DPI</label>
-                        <input type="text" name="txtdpi" class="form-control" id="inputEmail4" placeholder="">
+                        <input type="text" name="txtdpi" value="<%out.println(dpi);%>" class="form-control" id="inputEmail4" placeholder="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">REFERIDO POR:</label>

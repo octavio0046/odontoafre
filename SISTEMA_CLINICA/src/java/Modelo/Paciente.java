@@ -17,6 +17,15 @@ public class Paciente
   String estado;
   String dpi;
   
+  //constructor para traer el codigo del paciente y el dpi PacienteBD  metodo ValidarClient
+
+    public Paciente(int codigo_paciente, String dpi) {
+        this.codigo_paciente = codigo_paciente;
+        this.dpi = dpi;
+    }
+ 
+  
+  
   
  public Paciente(){
          

@@ -80,7 +80,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="ServletPacientes?accion=BuscarPaciente">Buscar Paciente</a>
-                            <a class="dropdown-item" href="formRegistrarPaciente.jsp">Registrar Paciente</a>
+                            <a class="dropdown-item"  data-toggle="modal" data-target="#exampleModalLong2" >Registrar Paciente</a>
                             <div class="dropdown-divider"></div>
 
                         </div>
@@ -179,7 +179,7 @@
     <body>      
 
 
-        <!-- Modal -->
+        <!-- Modal login -->
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -214,7 +214,39 @@
                 </div>
             </div>
         </div>
+        <%--fin modal login--%>
 
+        
+        
+        <!-- iinicio Modal para validar paciente para registro -->
+        <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5  class="modal-title" id="exampleModalLongTitle">VALIDACION DE CLIENTE</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <center>
+                            <form class="login" action="ServletPacientes" method="post" >
+                                <input type="hidden" required="" name="accion" value="ValidarPaciente"/>
+                                <label>DPI</label>
+                                <input type="text"  name="txtDpi">
+                                <br><br>
+                                <input type="submit"  class="btn btn-success"  value="VALIDAR" data-toggle="modal" data-target="#exampleModalLong2" >  
+                            </form>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN Modal para validar un paciente para registrarlo -->   
 
     </body>
 </html>

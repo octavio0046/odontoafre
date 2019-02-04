@@ -54,10 +54,27 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
       eliminarPaciente(request, response);
     } else if (accion.equals("ModificarPaciente")) {
       actualizarPaciente(request, response);
+    }else if (accion.equals("ValidarPaciente")) {
+     ValidarPaciente(request, response);
     }
     }
   
-  
+   private void ValidarPaciente(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException
+  {
+    String dpi = request.getParameter("txtDpi");  
+   
+         Paciente e = PacienteBD.validarCliente(dpi);
+    if (e!=null) {
+      response.sendRedirect("fichaPaciente.jsp?cod="+e.getCodigo_paciente()+"");
+    } else {
+      response.sendRedirect("formRegistrarPaciente.jsp?dpi="+dpi+"");
+    }
+    
+         //request.setAttribute("msg", "no existe la persona");
+          //request.getRequestDispatcher("formRegistrarCliente.jsp?dpi="+dpi+"").forward(request, response);
+      
+  }
   
   
   private void actualizarPaciente(HttpServletRequest request, HttpServletResponse response)

@@ -10,6 +10,31 @@ import java.util.ArrayList;
 
 public class PacienteBD
 {
+    //metodo para validar paciente para poder registrarlo
+       public static Paciente validarCliente(String dpi) {
+        Paciente e=null;
+      
+        try {
+            Connection cn = Conexion.getConexion();
+            CallableStatement cl = Conexion.getConexion().prepareCall("select COD_PACIENTE, DPI from TB_PACIENTES where DPI=? AND estado='ACTIVO'");
+            cl.setString(1, dpi);
+            ResultSet rs = cl.executeQuery();
+            while (rs.next()) {
+                e = new Paciente(rs.getInt(1), rs.getString(2));
+
+            }
+        } catch (Exception a) {
+        }
+        return e;
+    } 
+    
+    
+    
+    
+    
+    
+    
+    
     
      //este lmetodo es para obtener los clientes en el modal para ver la informacion completa dentro de la ficha del paciente
     public static Paciente obteneruNPaciente(int codigo) {
