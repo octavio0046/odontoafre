@@ -10,6 +10,27 @@ import java.util.ArrayList;
 
 public class PacienteBD
 {
+    
+     //este lmetodo es para obtener los clientes en el modal para ver la informacion completa dentro de la ficha del paciente
+    public static Paciente obteneruNPaciente(int codigo) {
+        Paciente p = null;
+        try {
+            CallableStatement cl = Conexion.getConexion().prepareCall("select * from TB_PACIENTES where COD_PACIENTE = ?");
+            cl.setInt(1, codigo);
+            ResultSet rs = cl.executeQuery();
+            while (rs.next()) {
+                p = new Paciente(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getString(11), rs.getString(12), rs.getString(13));
+
+            }
+        } catch (Exception e) {
+        }
+        return p;
+    }   
+    
+    
+    
+    
+    
   public static boolean insertarImagen(Imagenes p)
   {
     boolean rpta = false;
