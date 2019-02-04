@@ -90,7 +90,7 @@ public class ServletTratamientos extends HttpServlet {
 
         boolean rpta = PresupuestoBD.InseretarPresupuesto(p);
         if (rpta) {
-            response.sendRedirect("mensaje2.jsp?men=se Registro  correctamente");
+         response.sendRedirect("fichaPaciente.jsp?cod="+cod+"");
         } else {
             response.sendRedirect("mensaje2.jsp?men=No se regisro  correctamente");
         }

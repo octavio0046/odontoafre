@@ -216,8 +216,8 @@
         </div>
         <%--fin modal login--%>
 
-        
-        
+
+
         <!-- iinicio Modal para validar paciente para registro -->
         <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -234,7 +234,8 @@
                             <form class="login" action="ServletPacientes" method="post" >
                                 <input type="hidden" required="" name="accion" value="ValidarPaciente"/>
                                 <label>DPI</label>
-                                <input type="text"  name="txtDpi">
+                                <input type="text"  name="txtDpi" minlength="13" maxlength="13" >
+
                                 <br><br>
                                 <input type="submit"  class="btn btn-success"  value="VALIDAR" data-toggle="modal" data-target="#exampleModalLong2" >  
                             </form>
