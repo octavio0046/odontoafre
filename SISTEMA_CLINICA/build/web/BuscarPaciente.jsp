@@ -115,45 +115,12 @@
             </table>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div style="margin: 0 auto; width:850px; ">
             <iframe name="detalle" width="850" height="300"  frameborder="0">
 
             </iframe> 
 
         </div>      
-
-
-
-
 
     </div>
 </html>

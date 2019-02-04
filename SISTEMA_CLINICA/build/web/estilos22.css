@@ -9,72 +9,43 @@ and open the template in the editor.
 */
 
 
-table tr:hover{
-    
-    background: aqua;
-}
 
-table td:hover{
-    
-   background-color:  #01A9DB;
-   
-    
-}
-
-form{
-    
+form{ 
    width: 40%;
    border: 1px solid #ccc;
    margin: 20px;
    padding: 20px;
    align-content: center;
-  
 }
 
 form.login{
-    
    width: 80%;
    border: 1px solid #ccc;
    margin: 10px;
    padding: 10px;
-   align-content: center;
-  
+   align-content: center; 
 }
-
-
-form.obtenerPagosIntervalo{
-    
+form.obtenerPagosIntervalo{   
    width: 50%;
    border: 1px solid #ccc;
    margin: 10px;
    padding: 10px;
    align-content: center;
-
-  
 }
-
-
-form.formespecial{
-    
+form.formespecial{   
    width: 50%;
    border: 1px solid #ccc;
    margin: 20px;
    padding: 20px;
-    
 }
 
 form.antecedentes{
-    
    width: 40%;
    border: 1px solid #ccc;
    margin: 0px;
    padding: 20px;
-    
 }
-
-
-form.registrarPacientes{
-    
+form.registrarPacientes{   
    width: 60%;
    border: 1px solid #ccc;
    margin: 10px;
@@ -82,13 +53,8 @@ form.registrarPacientes{
     
 }
 
-
-
 label{
-    
-     font-size:15px ;
-     
-   
+     font-size:15px ; 
 }
 
 input{
@@ -98,10 +64,6 @@ input{
  box-sizing: border-box;
  border: 1px solid #ccc;
 }
-
-
-
-
 
 /*Menu*/
 header{
@@ -116,33 +78,20 @@ header{
     
 }
 
-ul{
- 
-    list-style:  none;
-    
+ul{ 
+    list-style:  none; 
 }
 li{
-    
     display: inline-block;
     float: left;
-    padding: 10px;
-    
+    padding: 10px;   
 }
-
-
-
-
-
 /*CSS NUEVO*/
 body.imagenesbod{
  background:  #222;
- font-family: monospace;
-    
+ font-family: monospace;   
 }
-
-
 .titulo{
-  
 }
 .contenedor-galeria{
   display: flex;
@@ -157,7 +106,6 @@ text-align: center;
 
 
 .galeria__img{
-    
     width: 300px;
     height: 400px;
     margin-bottom: 30px;
@@ -165,13 +113,8 @@ text-align: center;
     filter: brightness(70%);
     cursor: pointer;
     animation: escalar 1.5s infinite alternate;
-        
-    
+           
 }
-
-
-
-
 @keyframes escalar{
     to{
      transform: scale(1);   
@@ -185,23 +128,10 @@ text-align: center;
 }
 
 .galeria__img:hover{
-    filter: brightness(100%);
-
-    
-     
-    
-  
+    filter: brightness(100%); 
 }
-
-
-
-
-
-
 .contenedor-galeria h3{
-    
- color: white   
-    
+ color: white      
 }
 
 

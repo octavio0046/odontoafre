@@ -42,27 +42,27 @@
     </div>
     <div class="contenido">   
 
-        <center>                 
-            <h2 align="center">BUSCAR PAGOS INTERVALO DE FECHAS</h2>
+  
 
-            <form class="obtenerPagosIntervalo" action="ServletPagos" method="get">
-                <input type="hidden" name="accion" value="BuscarInterPagos" />
-
-
-                <label>DE</label>
-                <input class="" type="date"  name="txtFecha"><br>
-
-                <br> <label>A</label>
-                <input type="date"  name="txtFecha2">
-
-                <br>  <br>    <input  type="submit"  class="btn btn-dark" value="Buscar" >    
-
-            </form>
-
-          
-        </center>   
-
-
+<%---inicia formulario---%>
+<center>
+<form class="obtenerPagosIntervalo" action="ServletPagos" method="get">
+    
+  <div class="form-row">
+    <div class="col">
+          <label for="formGroupExampleInput">DE: </label>
+      <input type="date" name="txtFecha" class="form-control" >
+    </div>
+    <div class="col">
+          <label for="formGroupExampleInput">A: </label>
+      <input type="date" name="txtFecha2" class="form-control" >
+    </div>
+  </div>
+           <br>  <br>    <input  type="submit"  class="btn btn-dark" value="Buscar" > 
+           <input type="hidden" name="accion" value="BuscarInterPagos" />
+</form>
+</center>
+<%---finaliza formulario---%>        
 
 
     </div>
