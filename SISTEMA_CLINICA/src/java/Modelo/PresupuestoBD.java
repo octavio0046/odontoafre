@@ -8,7 +8,45 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class PresupuestoBD
+        
 {
+    
+        
+   //metodo para mostrar la table informacion en la ficha usuariocliente.jsp para el formulario 3
+   public static ArrayList<Presupuesto> obtenerSaldo(int cod,int cod2)
+  {
+    ArrayList<Presupuesto> listaPre = new ArrayList();
+    try
+    {
+      CallableStatement cl = Conexion.getConexion().prepareCall("SELECT B.PRECIO-SUM(A.PAGO),B.PRECIO \n" +
+"FROM TB_PAGOS A,TB_PRESUPUESTO B\n" +
+" WHERE B.COD_PACIENTE=? AND A.ESTADO='ACTIVO'\n" +
+" AND A.COD_PRESUPUESTO=? AND A.COD_PRESUPUESTO=B.COD_PRESUPUESTO");
+      
+      cl.setInt(1, cod);
+       cl.setInt(2, cod2);
+      ResultSet rs = cl.executeQuery();
+      while (rs.next())
+      {
+        Presupuesto v = new Presupuesto(rs.getDouble(1),rs.getDouble(2));
+        listaPre.add(v);
+      }
+    }
+    catch (Exception e)
+    {
+      System.out.println(e);
+    }
+    return listaPre;
+  }
+    
+    
+    
+    
+    
+    
+    
+    
+    
   public static ArrayList<Presupuesto> obtenerUnPresupuesto(int num)
   {
     ArrayList<Presupuesto> lista = new ArrayList();

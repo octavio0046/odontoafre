@@ -15,17 +15,14 @@ public class Presupuesto
   private String fecha2;
   private double pago;
   private double saldo;
+
   
-  public double getPago()
-  {
-    return this.pago;
-  }
-  
-  public void setPago(double pago)
-  {
-    this.pago = pago;
-  }
-  
+  ////constructor para obtener el saldo del presupuesto seleccionado PresupuestoBD obtenerSaldo
+    public Presupuesto(double saldo,double precio) {
+        this.saldo = saldo;
+        this.precio=precio;
+    }
+ 
   
     public Presupuesto(){}
   
@@ -71,6 +68,19 @@ public class Presupuesto
     this.usuario = usuario;
     this.estado = estado;
   }
+  
+  
+    
+  public double getPago()
+  {
+    return this.pago;
+  }
+  
+  public void setPago(double pago)
+  {
+    this.pago = pago;
+  }
+  
   
   public int getCodigo()
   {
