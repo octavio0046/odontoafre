@@ -88,9 +88,9 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     String fecha = request.getParameter("txtFecha");
     String Direccion = request.getParameter("txtDreccion");
     int recidencial = Integer.parseInt(request.getParameter("txtRecidencial"));
-    int telefono = Integer.parseInt(request.getParameter("txtCel"));
-    int telefono2 = Integer.parseInt(request.getParameter("txtCel2"));
-    String referido = request.getParameter("txtReferido");
+    int telefono = Integer.parseInt(request.getParameter("txtCelular1"));
+    int telefono2 = Integer.parseInt(request.getParameter("txtCelular2"));
+    String referido = request.getParameter("txtReferencia");
     String ocupacion = request.getParameter("txtOcupacion");
     String estado = request.getParameter("txtEstado");
     String dpi = request.getParameter("txtdpi");
@@ -98,7 +98,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     Paciente p = new Paciente(cod, ape, ape2, nombre, nombre2, fecha, Direccion, recidencial, telefono, telefono2, referido, ocupacion, estado, dpi);
     boolean rpta = PacienteBD.actualizarPaciente(p);
     if (rpta) {
-      response.sendRedirect("mensaje2.jsp?men=Se actualizo de manera correcta");
+      response.sendRedirect("ServletPacientes?accion=BuscarPaciente");
     } else {
       response.sendRedirect("mensaje2.jsp?men=No se actualizo ");
     }

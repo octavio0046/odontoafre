@@ -79,9 +79,6 @@
                     <td>  <a href="formVerSaldoTratamiento.jsp?cod=<%= d.getCodigo_paciente()%>&cod2=<%=d.getCodigo()%>"
                              target="detalle" class="btn btn-primary" >Ver Saldos</a></td>
 
-
-    
-
             <%        if (sesionOK.getAttribute("perfil") != null && sesionOK.getAttribute("perfil").equals("ADMIN")) {
 
 

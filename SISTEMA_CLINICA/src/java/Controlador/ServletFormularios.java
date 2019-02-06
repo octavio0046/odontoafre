@@ -58,7 +58,7 @@ public class ServletFormularios extends HttpServlet {
   private void registrarFormulario(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
   {
-    int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
+    int codigo_paciente = Integer.parseInt(request.getParameter("txtCodigo"));
     String veces = request.getParameter("txtCuantas");
     String hilo = request.getParameter("txtHilo");
     String lengua = request.getParameter("txtLengua");
@@ -81,11 +81,11 @@ public class ServletFormularios extends HttpServlet {
     String hospitalizado = request.getParameter("txtHospitalizado");
     String porque = request.getParameter("txtPorque");
     
-    FormularioPaciente p = new FormularioPaciente(codigo, ultima_vez, hilo, lengua, sangra, motivo, molestias, es, duele, inflamacion, color, aliente, ultima_vez, embarazada, medicamento, anestesia, extraido_piezas, hemorragias, enfermedad, henfermedad2, hospitalizado, porque);
+    FormularioPaciente p = new FormularioPaciente(codigo_paciente, ultima_vez, hilo, lengua, sangra, motivo, molestias, es, duele, inflamacion, color, aliente, ultima_vez, embarazada, medicamento, anestesia, extraido_piezas, hemorragias, enfermedad, henfermedad2, hospitalizado, porque);
     
     boolean rpta = FormulariosBD.insertarFormularioPaciente(p);
     if (rpta) {
-      response.sendRedirect("mensaje2.jsp?men=se Registro el formulario del paciente correctamente");
+     response.sendRedirect("fichaPaciente.jsp?cod="+codigo_paciente+"");;
     } else {
       response.sendRedirect("mensaje2.jsp?men=No se regisro el paciente correctamente");
     }

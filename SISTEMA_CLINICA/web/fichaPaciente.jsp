@@ -87,10 +87,10 @@
                                 </div>
 
                                 <input type="hidden" name="accion" value="RegistrarPresupuesto" />
-                               <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
-                               
-                                    <a href="obtenerPresupuesto.jsp?cod=<%=a.getCodigo_paciente()%>"
-                                       >Ver Detalle</a>
+                                <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
+             
+                                
+                                <br><br><a href="obtenerPresupuesto.jsp?cod=<%=a.getCodigo_paciente()%>" type="button" class="btn btn-primary btn-lg btn-block">Ver Presupuesto</a>
                             </form>                   
                         </center> 
                         <%--finaliza el formulario de presupuesto----%>

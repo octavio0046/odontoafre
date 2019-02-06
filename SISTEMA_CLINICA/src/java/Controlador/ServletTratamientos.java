@@ -61,6 +61,7 @@ public class ServletTratamientos extends HttpServlet {
 
     private void actualizarTratamiento(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         int codigoPaciente = Integer.parseInt(request.getParameter("txtCodigoPaciente"));
         int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
         String pieza = request.getParameter("txtPieza");
         String presupuesto = request.getParameter("txtPresupuesto");
@@ -72,7 +73,7 @@ public class ServletTratamientos extends HttpServlet {
         Presupuesto p = new Presupuesto(codigo, pieza, presupuesto, precio.doubleValue(), usuario, Estado);
         boolean rpta = PresupuestoBD.actualizarPresupuesto(p);
         if (rpta) {
-            response.sendRedirect("mensaje2.jsp?men=Se actualizo de manera correcta");
+           response.sendRedirect("obtenerPresupuesto.jsp?cod="+codigoPaciente+"");
         } else {
             response.sendRedirect("mensaje2.jsp?men=No se actualizo ");
         }
