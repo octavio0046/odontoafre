@@ -33,6 +33,9 @@
         <title>JSP Page</title>
 
         <%@include file="template1.jsp" %>
+        <%@include file="obtenerDetallePaciente.jsp" %>
+   
+
         <script src="js/jquery.js" ></script>
         <script src="js/jquery.dataTables.min.js" ></script>
 
@@ -81,9 +84,12 @@
                         <td><%=v.getReferido()%></td>
                         <td><%=v.getOcupacion()%></td>
                         <td><%=v.getDpi()%></td>
-                        <td><a href="obtenerDetallePaciente.jsp?cod=<%=v.getCodigo_paciente()%>"
-                               target="detalle">Ver Detalle</a>
+              
+                         <td><a href="obtenerDetallePaciente.jsp?cod=<%=v.getCodigo_paciente()%>"
+                             data-toggle="modal" data-target="#exampleModalLongAnt">Ver Detalle</a>
                         </td>
+                        
+                        
                         <td>
                             <a href="fichaPaciente.jsp?cod=<%=v.getCodigo_paciente()%>">
                                 <img src="ficha.png" whit="30" height="30">

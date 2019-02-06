@@ -304,7 +304,7 @@ public class DetallePaciente
   
   public static ArrayList<FormularioPaciente> obtenerFormularioPaciente(int num)
   {
-    ArrayList<FormularioPaciente> lista = new ArrayList();
+    ArrayList<FormularioPaciente> listaDeta = new ArrayList();
     try
     {
       CallableStatement cl = Conexion.getConexion().prepareCall("SELECT * FROM TB_FORMU_PACIENTE WHERE COD_PACIENTE=?");
@@ -313,14 +313,14 @@ public class DetallePaciente
       while (rs.next())
       {
         FormularioPaciente v = new FormularioPaciente(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getString(12), rs.getString(13), rs.getInt(14), rs.getString(15), rs.getString(16), rs.getString(17), rs.getString(18), rs.getString(19), rs.getString(20), rs.getString(21), rs.getString(22), rs.getString(23));
-        lista.add(v);
+        listaDeta.add(v);
       }
     }
     catch (Exception e)
     {
       System.out.println(e);
     }
-    return lista;
+    return listaDeta;
   }
   
   public static ArrayList<Paciente> obtenerUnPaciente(String nom)

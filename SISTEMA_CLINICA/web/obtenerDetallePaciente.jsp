@@ -5,156 +5,189 @@
 <!DOCTYPE html>
 
 <%
-  response.setHeader("Pragma", "no-cache");
-  response.addHeader("Cache-control", "must-revalidate");
-  response.addHeader("Cache-control", "no-cache");
-  response.addHeader("Cache-control", "no-store");
-  response.setDateHeader("Expires", 0);
-  try {
-           if(session.getAttribute("nom")==null){
-      
+    response.setHeader("Pragma", "no-cache");
+    response.addHeader("Cache-control", "must-revalidate");
+    response.addHeader("Cache-control", "no-cache");
+    response.addHeader("Cache-control", "no-store");
+    response.setDateHeader("Expires", 0);
+    try {
+        if (session.getAttribute("nom") == null) {
 
-      request.getRequestDispatcher("index.jsp").forward(request, response);
-      
-  }
-  }catch(Exception e){
-      
-    request.getRequestDispatcher("index.jsp").forward(request, response);  
-  }
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+
+        }
+    } catch (Exception e) {
+
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
 %>
 
 <html>
-    <head>
+    <div class="cabecera">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-    </head>
-    
-    <body>
-        <h2 align="center">Antecedentes del Paciente</h2>
-        
-        <table border="1" width="600" align="center">
-            
-            <%
-                ArrayList<FormularioPaciente> lista = DetallePaciente.obtenerFormularioPaciente(Integer.parseInt(request.getParameter("cod")));
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-                for (int i = 0; i < lista.size(); i++) {
-                    FormularioPaciente d = lista.get(i);
-            %> 
-            
-            
-            <tr bgcolor="skyblue"> 
-            <tr>  
-                <td>Cod Formulario</td> 
-                <td><%= d.getCodigo_formulario()%></td>
-           </tr>
-           <tr>
-                 <td>Cod_paciente</td> 
-                  <td><%= d.getCodigo()%></td>
-           
-            </tr>
-            
-            <tr>
-                     <td>1.Cuantas Veces se Sepilla al Dia?</td> 
-                     <td><%= d.getCuantas_veces()%></td>
-            </tr>
-                       
-            <tr>
-                <td>2.Utiliza hilo Dental</td>         
-                <td><%= d.getHilo()%></td>
-            </tr>
-            
-            <tr>
-                <td>3.Utiliza Limpia Lengua</td> 
-                  <td><%= d.getLengua()%></td>
-            </tr>
-            <tr>
-                <td>4.Sangra al Cepillarse?</td> 
-                  <td><%= d.getSangra()%></td>
-            </tr>
-            
-            <tr>
-                <td>5.Motivo de consulta</td> 
-                    <td><%= d.getMotivo()%></td>
-            </tr>
-            
-            <tr>
-                <td>6. Tiene alguna Molestia</td> 
-                <td><%= d.getMolestais()%></td>
-            </tr>
-            <tr>
-                <td>7. Como es?</td> 
-              <td><%= d.getEs()%></td>
-          </tr>
-          
-          <tr>
-              <td>8. Duele mas al</td> 
-                <td><%= d.getDuele()%></td>
-         </tr>
-         <tr>
-                <td>9.Inflamacion alguna vez?</td> 
-                    <th><%= d.getInflamacion()%></td>
-         </tr>
+    </div>
+    <div class="contenido"> 
 
-         <tr>
-                    <td>10.Le gusta el color de sus dientes?</td> 
-                <td><%= d.getColor()%></td>
-       </tr>        
-        <tr>   
-               <td>11.Cree tener Mal aliento</td> 
-               <td><%= d.getMal_aliento()%></td>
-       </tr>
-            <tr>
-                <td>12.Cuando fue la ultima vez al Dentista </td> 
-                       <th><%= d.getUltima_vez()%></td>
-          </tr>
-     <tr>
-          <td>13.Esta Embarazada</td> 
-                <td><%= d.getEmbarazada()%></td>
-     </tr>         
-       <tr>        
-                <td>14.Tiene algun Medicamento</td> 
-                 <td><%= d.getMedicamento()%></td>
-      </tr>
-      <tr>
-          
-      
-                <td>15.Le han colocado anestesia</td>
-                   <td><%= d.getAnestesia()%></td>
-         </tr> 
-         <tr>
-                   <td>16.Le han extraido piezas dentales</td> 
-                <td><%= d.getExtraido()%></td>
-         </tr> 
-         <tr>
-                <td>17.Le han extraido Hemorragias</td> 
-                    <th><%= d.getHemorragias()%></td>
-        </tr>
-        <tr>
-                    <td>18.Padece alguna enfermedad</td> 
-                <th><%= d.getEnfermedad()%></td>
-        </tr>         
-        <tr>   
-        <td>19.Enfermedad que tiene</td> 
-                      <th><%= d.getEnfermedad2()%></td>
-       </tr>
-       <tr>
-                  <td>20.Ha estado Hospitalizado</td> 
-                 <th><%= d.getHospitalizado()%></td>
-      </tr>
-      <tr>
-                 <td>21. Por que?</td> 
-                <td><%= d.getPorque()%></td>
-      </tr>   
-                   </tr>
-               
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLongAnt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Antecedentes del Paciente</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" >
+                        <%---empieza contenido del modal-----%>
+                        <table border="1" >
+                   
+                            <%
+                                  Paciente pa = PacienteBD.obtenerPacientes2();
+                                ArrayList<FormularioPaciente> listaDeta = DetallePaciente.obtenerFormularioPaciente(pa.getCodigo_paciente());
+                                for (int i = 0; i < listaDeta.size(); i++) {
+                                    FormularioPaciente d = listaDeta.get(i);
+                            %> 
+                            <tr bgcolor="skyblue"> 
+                            <tr>  
+                                <td>Cod Formulario</td> 
+                                <td><%= d.getCodigo_formulario()%></td>
+                            </tr>
+                            <tr>
+                                <td>Cod_paciente</td> 
+                                <td><%= d.getCodigo()%></td>
+                            </tr>
+                            <tr>
+                                <td>1.Cuantas Veces se Sepilla al Dia?</td> 
+                                <td><%= d.getCuantas_veces()%></td>
+                            </tr>
+                            <tr>
+                                <td>2.Utiliza hilo Dental</td>         
+                                <td><%= d.getHilo()%></td>
+                            </tr>
+
+                            <tr>
+                                <td>3.Utiliza Limpia Lengua</td> 
+                                <td><%= d.getLengua()%></td>
+                            </tr>
+                            <tr>
+                                <td>4.Sangra al Cepillarse?</td> 
+                                <td><%= d.getSangra()%></td>
+                            </tr>
+
+                            <tr>
+                                <td>5.Motivo de consulta</td> 
+                                <td><%= d.getMotivo()%></td>
+                            </tr>
+
+                            <tr>
+                                <td>6. Tiene alguna Molestia</td> 
+                                <td><%= d.getMolestais()%></td>
+                            </tr>
+                            <tr>
+                                <td>7. Como es?</td> 
+                                <td><%= d.getEs()%></td>
+                            </tr>
+
+                            <tr>
+                                <td>8. Duele mas al</td> 
+                                <td><%= d.getDuele()%></td>
+                            </tr>
+                            <tr>
+                                <td>9.Inflamacion alguna vez?</td> 
+                                <th><%= d.getInflamacion()%></td>
+                            </tr>
+
+                            <tr>
+                                <td>10.Le gusta el color de sus dientes?</td> 
+                                <td><%= d.getColor()%></td>
+                            </tr>        
+                            <tr>   
+                                <td>11.Cree tener Mal aliento</td> 
+                                <td><%= d.getMal_aliento()%></td>
+                            </tr>
+                            <tr>
+                                <td>12.Cuando fue la ultima vez al Dentista </td> 
+                                <th><%= d.getUltima_vez()%></td>
+                            </tr>
+                            <tr>
+                                <td>13.Esta Embarazada</td> 
+                                <td><%= d.getEmbarazada()%></td>
+                            </tr>         
+                            <tr>        
+                                <td>14.Tiene algun Medicamento</td> 
+                                <td><%= d.getMedicamento()%></td>
+                            </tr>
+                            <tr>
 
 
-            <%
-            }
-            %>
-        </table>
-        
-        
-        
-    </body>
+                                <td>15.Le han colocado anestesia</td>
+                                <td><%= d.getAnestesia()%></td>
+                            </tr> 
+                            <tr>
+                                <td>16.Le han extraido piezas dentales</td> 
+                                <td><%= d.getExtraido()%></td>
+                            </tr> 
+                            <tr>
+                                <td>17.Le han extraido Hemorragias</td> 
+                                <th><%= d.getHemorragias()%></td>
+                            </tr>
+                            <tr>
+                                <td>18.Padece alguna enfermedad</td> 
+                                <th><%= d.getEnfermedad()%></td>
+                            </tr>         
+                            <tr>   
+                                <td>19.Enfermedad que tiene</td> 
+                                <th><%= d.getEnfermedad2()%></td>
+                            </tr>
+                            <tr>
+                                <td>20.Ha estado Hospitalizado</td> 
+                                <th><%= d.getHospitalizado()%></td>
+                            </tr>
+                            <tr>
+                                <td>21. Por que?</td> 
+                                <td><%= d.getPorque()%></td>
+                            </tr>   
+                            </tr>
+
+                            <%
+                                }
+                            %>
+                        </table>
+
+                        <%---finaliza el contenido del modal----%>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
 </html>
