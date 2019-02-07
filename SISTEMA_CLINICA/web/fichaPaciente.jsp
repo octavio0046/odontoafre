@@ -64,9 +64,9 @@
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                       <%---empieza formulario de presupuesto-----%>
+                        <%---empieza formulario de presupuesto-----%>
                         <center>
-                             <h2>PRESUPUESTO PACIENTE</h2>
+                            <h2>PRESUPUESTO PACIENTE</h2>
                             <form action="ServletTratamientos" method="get" >
                                 <input name="txtUsuario" value="<%out.println(nom);%>" hidden=""/>
                                 <input name="txtCodigoPaciente" value="<%= a.getCodigo_paciente()%>" hidden=""/>
@@ -80,16 +80,16 @@
                                     <label for="exampleFormControlTextarea1">Tratamiento</label>
                                     <textarea name="txtTratamiento" style="width:500px;height:100px; text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
-                                
-                               <div class="form-group">
+
+                                <div class="form-group">
                                     <label for="exampleFormControlInput1">Precio</label>
                                     <input type="number" step='0.01' value='0.00' name="txtPrecio"  class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                 </div>
 
                                 <input type="hidden" name="accion" value="RegistrarPresupuesto" />
                                 <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
-             
-                                
+
+
                                 <br><br><a href="obtenerPresupuesto.jsp?cod=<%=a.getCodigo_paciente()%>" type="button" class="btn btn-primary btn-lg btn-block">Ver Presupuesto</a>
                             </form>                   
                         </center> 
@@ -107,51 +107,56 @@
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                        <h4 align="center">HISTORIAL DEL PACIENTE</h4>
-                        <table BORDER width="5%" heigth="50%" align="center"  >
+                        <%----INICIA EL FORMULARIO DEL HISTORIAL-----%>
+                        <center>
                             <form action="ServletHistorial" method="get">
-                                <tr bgcolor="#FF5733" width="50%" >
-                                    <th >PIEZA</th><th >CONDUCTO</th>
-                                    <th>CONDUCTOMETRIA</th><th>BASE</th>
-                                    <th>CEMENTO</th> <th>OBSERVACIONES</th> 
-                                </tr>
-                                <tr>
                                 <input type="hidden"  name="txtCodigoPaciente" value="<%= a.getCodigo_paciente()%>" style="width:50px;height:15px" readonly="" >
-                                <td>
-                                    <input type="number" step='0.01' value='0.00' placeholder="PIEZA" name="txtPieza"> 
-                                </td> 
-                                <td>
-                                    <textarea type="text"   name="txtConducto" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();"   required="" ></textarea>
-                                </td> 
-                                <td>
-                                    <textarea type="text"   name="txtConductometria" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();"  required=""  ></textarea>
-                                </td> 
-                                <td>
-                                    <textarea type="text"   name="txtBase" style="width:150px;height:75px"  style="text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();"  required=""  ></textarea>
-                                </td> 
-                                <td>
-                                    <textarea type="text"   name="txtOtb" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();"   required=""  ></textarea>
-                                </td> 
-                                <td>
-                                    <textarea type="text"   name="txtObservaciones" style="width:150px;height:75px" style="text-transform:uppercase;" onkeyup="javascript:this.value = this.value.toUpperCase();"  required=""  ></textarea>
-                                </td> 
-                                <%if (sesionOK.getAttribute("perfil") != null) {
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">PIEZA</label>
+                                    <input type="number" step='0.01' value='0.00' placeholder="PIEZA" name="txtPieza" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                </div>
 
-                                        //si alguien ya inicio sesion entonces mostrar su nombre 
-                                %>
-                                <input type="hidden"  name="txtUsuario" value="<%out.println(nom);%>" style="width:150px;height:15px" readonly="">
-                                <%
-                                    }
-                                %>
-                                <td colspan="10"> 
-                                    <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
-                                </td>
-                                </tr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="exampleFormControlTextarea1">CONDUCTO</label>
+                                        <textarea class="form-control"  name="txtConducto" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="exampleFormControlTextarea1">CONDUCTOMETRIA</label>
+                                        <textarea class="form-control" name="txtConductometria" id="exampleFormControlTextarea1" rows="3"></textarea>  
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="exampleFormControlTextarea1">BASE</label>
+                                        <textarea class="form-control"    name="txtBase" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="exampleFormControlTextarea1">CEMENTO</label>
+                                        <textarea class="form-control"  name="txtOtb" id="exampleFormControlTextarea1" rows="3"></textarea>  
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="exampleFormControlTextarea1">OBSERVACIONES</label>
+                                        <textarea class="form-control" name="txtObservaciones" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <input type="hidden"  name="txtUsuario" value="<%out.println(nom);%>" style="width:150px;height:15px" readonly="">
+                                
+                                </div>
+
                                 <input type="hidden" name="accion" value="RegistrarHistorial"/> 
-                                <br>     
-                                <th><a href="obtenerHistorial.jsp?cod=<%=a.getCodigo_paciente()%>">Ver Historial</a></th>
-                            </form>  
-                        </table>
+                                <input type="submit" class="btn btn-outline-success" value="Registrar" name="Registrarse" />
+                          <br><br><a href="obtenerHistorial.jsp?cod=<%=a.getCodigo_paciente()%>" type="button" class="btn btn-primary btn-lg btn-block">Ver HISTORIALES</a>
+                            </form>
+                        </center>
+                        <%---TERMINA EL FORMULARIO DEL HISTORIAL------>
+                          
+                        <%---finaliza el collapso--%>
+
+
 
                     </div>
                 </div>
@@ -171,10 +176,6 @@
                 </div>
             </div>
         </div>
-        <%---finaliza el collapso--%>
-
-
-
 
         <%----Empieza modal para ver la informacion del paciente----%>
         <!-- Button trigger modal -->

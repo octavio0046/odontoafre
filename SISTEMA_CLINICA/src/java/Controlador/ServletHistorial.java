@@ -108,7 +108,7 @@ public class ServletHistorial extends HttpServlet {
     
     boolean rpta = HistorialBD.InseretarHistorial(p);
     if (rpta) {
-      response.sendRedirect("mensaje2.jsp?men=se registro correctamente");
+       response.sendRedirect("fichaPaciente.jsp?cod="+codpaciente+"");
     } else {
       response.sendRedirect("mensaje2.jsp?men=No se regisro  correctamente");
     }

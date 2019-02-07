@@ -51,6 +51,7 @@
                 Presupuesto d = lista.get(i);
         %> 
         <%------empieza tabla-------%>
+         <div class="table-responsive">
         <table class="table table-sm">
             <thead>
                 <tr>
@@ -107,6 +108,7 @@
             </tr>
             </tbody>
         </table>
+         </div>
         <%---termina tabla----%>
         <center>
 
